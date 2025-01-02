@@ -23,6 +23,9 @@ ul li{
     border-radius: 56px;
     align-items: center;
     gap: 45px;
+    /* Alternative */
+    /* position: sticky;
+    top: 0; */
 }
 #header, .leftHeader, .rightHeader, .logoBox , .anchorLinks ul{
     display: flex;
@@ -249,26 +252,41 @@ section .sec-content{
     display: flex;
     margin: auto;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     height: 250px;
     background-color: black;
     color: white;
-    
   }
   .footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 10px;
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    justify-content: space-around;
+    margin-top:  30px;
   
   }
 
   .footer-content{
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 250px;
+    gap: 10px;
   }
 
+  .grid-cols{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 25px;
+  }
+  .left-footer{
+    display: flex;
+    align-items: center;
+  }
+  .right-footer{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3,1fr);
+  }
   .footer-content a{
     text-decoration: none;
     color: white;
@@ -276,15 +294,34 @@ section .sec-content{
 
   .footersub{
     display: flex;
+    color: white;
+    background-color: black;
     justify-content: space-between;
+    border-top: 2px solid #a3a3a3;
+    padding: 10px;
   }
+
+  .policy a{
+    text-decoration: none;
+    color: grey;
+  }
+
+
   
   .policy{
-    display: flex;
-    gap: 10px;
     
-
-    /* padding: 20px; */
+    font-size: 0.8rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 1px;
+    
+  }
+  .copyright{
+    color: grey;
+    font-size: 0.8rem;
   }
 
 
