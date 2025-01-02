@@ -111,3 +111,30 @@ ul li{
     border-radius: 15px;
     background-color: antiquewhite;
 }
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 24px;
+    /* gap: 125px; */
+}
+
+section .sec-content{
+    text-align: center;
+    width: 300px;
+}
+
+.sec-content h2{
+    position: relative;
+    top: 40px;
+}
+
+.sec-img img{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.seperation{
+    border: 2px solid gray;
+}
