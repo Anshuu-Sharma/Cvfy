@@ -1,137 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ResumeWiz</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="main_container">
-      <div id="header">
-        <div id="header-container">
-          <div class="leftHeader">
-            <div class="logoBox">
-              <img src="sea.jpg" alt="logoImg" width="50px" height="50px" />
-              <h1>ResumeWiz</h1>
-            </div>
-            <div class="anchorLinks">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Cover Letter</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ResumeWiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="main_container">
+    <div id="header">
+      <div id="header-container">
+        <div class="leftHeader">
+          <div class="logoBox">
+            <img src="sea.jpg" alt="logoImg" width="50px" height="50px" />
+            <h1>ResumeWiz</h1>
           </div>
-          <div class="rightHeader">
-            <button>Sign In</button>
-            <button>Sign Up</button>
+          <div class="anchorLinks">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Resume</a></li>
+              <li><a href="#">Cover Letter</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
           </div>
+        </div>
+        <div class="rightHeader">
+          <button>Sign In</button>
+          <button>Sign Up</button>
         </div>
       </div>
-
-      <div class="first">
-        <div class="content">
-          <h1>
-            ResumeWiz's Resume Builder helps you get hired at top companies
-          </h1>
-          <div class="btns">
-            <button class="btn btn1">Create Now</button>
-            <button class="btn btn2">Check Now</button>
-          </div>
-        </div>
-        <div class="resume-img">
-          <img src="heroimg.jpg" alt="resume" />
-        </div>
-      </div>
-
-      <section>
-        <div class="sec-img">
-          <img src="heroimg.jpg" alt="image">
-        </div>
-        <div class="sec-content">
-          <h2>Get an AI powered review of your resume!</h2>
-        </div>
-      </section>
-
-      <div class="seperation"></div>
-      
-      <!-- ATS Checker Section -->
-      <section class="ats-section">
-        <div class="ats-container">
-          <h2>Check Your Resume's ATS Score</h2>
-          <div id="ats-drop-zone" class="ats-drop-zone">
-            <div class="drop-content">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgb(180, 209, 209)' stroke-width='2'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpolyline points='17 8 12 3 7 8'/%3E%3Cline x1='12' y1='3' x2='12' y2='15'/%3E%3C/svg%3E" alt="Upload">
-              <h3>Drag & Drop your resume here</h3>
-              <p>or click to browse</p>
-            </div>
-          </div>
-          <input type="file" id="ats-file-input" class="ats-file-input" accept=".pdf">
-          <div id="ats-loading">
-            <div class="ats-spinner"></div>
-            <p>Analyzing your resume...</p>
-          </div>
-          
-          <div id="ats-results">
-            <h3>Your ATS Compatibility Score</h3>
-            <div id="ats-score" class="ats-score">-</div>
-            <h4>Keywords Found in Your Resume</h4>
-            <div id="ats-keywords" class="keywords-container"></div>
-          </div>
-        </div>
-      </section>
-
-      <div class="seperation"></div>
-
-      <section>
-        <div class="sec-content">
-          <h2>Path Guidance</h2>
-        </div>
-        <div class="sec-img">
-          <img src="heroimg.jpg" alt="image">
-        </div>
-      </section>
-
-      <div class="seperation"></div>
-
-
-      <section>
-        <div class="sec-img">
-          <img src="heroimg.jpg" alt="image">
-        </div>
-        <div class="sec-content">
-          <h2>Are you prepared for a job role?</h2>
-        </div>
-      </section>
-
-      <div class="seperation"></div>
-
-
-      <section>
-        <div class="sec-content">
-          <h2>We can help rewrite your Resume!</h2>
-        </div>
-        <div class="sec-img">
-          <img src="heroimg.jpg" alt="image">
-        </div>
-      </section>
-
-      <div class="seperation"></div>
-
-      <section>
-        <div class="sec-img">
-          <img src="heroimg.jpg" alt="image">
-        </div>
-        <div class="sec-content">
-          <h2>Cover Letter Generation depending on your CV</h2>
-        </div>
-      </section>
-
-      <div class="seperation"></div>
     </div>
 
-    <script type="module" src="js/main.js"></script>
-  </body>
+    <div class="first">
+      <div class="content">
+        <h1>
+          ResumeWiz's Resume Builder helps you get hired at top companies
+        </h1>
+        <div class="btns">
+          <button class="btn btn1">Create Now</button>
+          <button class="btn btn2">Check Now</button>
+        </div>
+      </div>
+      <div class="resume-img">
+        <img src="heroimg.jpg" alt="resume" />
+      </div>
+    </div>
+
+    <section>
+      <div class="sec-img">
+        <img src="heroimg.jpg" alt="image">
+      </div>
+      <div class="sec-content">
+        <h2>Get an AI powered review of your resume!</h2>
+      </div>
+    </section>
+
+    <div class="seperation"></div>
+
+    <!-- ATS Checker Section -->
+    <section class="ats-section">
+      <div class="ats-container">
+        <h2>Check Your Resume's ATS Score</h2>
+        <div id="ats-drop-zone" class="ats-drop-zone">
+          <div class="drop-content">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgb(180, 209, 209)' stroke-width='2'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpolyline points='17 8 12 3 7 8'/%3E%3Cline x1='12' y1='3' x2='12' y2='15'/%3E%3C/svg%3E"
+              alt="Upload">
+            <h3>Drag & Drop your resume here</h3>
+            <p>or click to browse</p>
+          </div>
+        </div>
+        <input type="file" id="ats-file-input" class="ats-file-input" accept=".pdf">
+        <div id="ats-loading">
+          <div class="ats-spinner"></div>
+          <p>Analyzing your resume...</p>
+        </div>
+
+        <div id="ats-results">
+          <h3>Your ATS Compatibility Score</h3>
+          <div id="ats-score" class="ats-score">-</div>
+          <h4>Keywords Found in Your Resume</h4>
+          <div id="ats-keywords" class="keywords-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="seperation"></div>
+
+    <section>
+      <div class="sec-content">
+        <h2>Path Guidance</h2>
+      </div>
+      <div class="sec-img">
+        <img src="heroimg.jpg" alt="image">
+      </div>
+    </section>
+
+    <div class="seperation"></div>
+
+
+    <section>
+      <div class="sec-img">
+        <img src="heroimg.jpg" alt="image">
+      </div>
+      <div class="sec-content">
+        <h2>Are you prepared for a job role?</h2>
+      </div>
+    </section>
+
+    <div class="seperation"></div>
+
+
+    <section>
+      <div class="sec-content">
+        <h2>We can help rewrite your Resume!</h2>
+      </div>
+      <div class="sec-img">
+        <img src="heroimg.jpg" alt="image">
+      </div>
+    </section>
+
+    <div class="seperation"></div>
+
+    <section>
+      <div class="sec-img">
+        <img src="heroimg.jpg" alt="image">
+      </div>
+      <div class="sec-content">
+        <h2>Cover Letter Generation depending on your CV</h2>
+      </div>
+    </section>
+
+    <div class="seperation"></div>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-content">
+          <h3>ResumeWiz</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed pariatur cupiditate facilis, fuga veritatis
+            optio.</p>
+        </div>
+
+        <div class="footer-content">
+          <h3>Features</h3>
+
+          <a href="/">ATS Score of your Resume</a>
+          <a href="/">Path Guidance</a>
+          <a href="/">AI Suggestion</a>
+          <a href="/">Cover Letter Generation</a>
+        </div>
+
+
+        <div class="footer-content">
+          <h3>Resources</h3>
+          <a href="/">Documentation</a>
+          <a href="/">API</a>
+          <a href="/">Tutorials</a>
+          <a href="/">Blog</a>
+        </div>
+
+        <div class="footer-content">
+          <h3>Contact Us</h3>
+          <a href="/">sloeoweo@gmail.com</a>
+          <a href="/">7217787725</a>
+        </div>
+      </div>
+      <div class="footersub">
+        <div class="copyright">
+          &copy; 2025 ResumeWiz. All rights reserved.
+        </div>
+        <div class="policy">
+          <div class="privacypolicies">
+            <a href="">privacypolicies</a>
+          </div>
+          <div class="cookiespolicy"><a href="">cookiespolicy</a></div>
+          <div class="termsservice"><a href="">terms of service</a></div>
+          
+        </div>
+
+      
+    </div>
+    </footer>
+
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
 </html>
