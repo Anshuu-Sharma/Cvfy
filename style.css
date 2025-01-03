@@ -6,35 +6,44 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Rubik", serif;    
-}
-body{
+  }
+  body{
     width: 100vw;
     height: 100vh;
+    background-image: url('bg1.png');
+    background-attachment: fixed;
 }
 ul li{
     list-style: none;
-}
+  }
+  #header, .leftHeader, .rightHeader, .logoBox , .anchorLinks ul{
+      display: flex;
+      gap: 1rem;
+      
+  }
 #header{
-    background-color: rgb(180, 209, 209);
-    margin: 20px auto;
-    width: fit-content;
-    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.551);
+    backdrop-filter: blur(10px);
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
     padding: 20px;
-    border-radius: 56px;
     align-items: center;
-    gap: 45px;
     /* Alternative */
-    /* position: sticky;
-    top: 0; */
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
-#header, .leftHeader, .rightHeader, .logoBox , .anchorLinks ul{
-    display: flex;
-    gap: 1rem;
-    
+#main_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #header-container{
     display: flex;
     gap: 45px;
+    justify-content: center;
     align-items: center;
 }
 .logoBox{
@@ -55,8 +64,7 @@ ul li{
 .anchorLinks ul li a{
     text-decoration: none;
     color: black;
-    font-size: 22px;
-    /* font-weight: 600; */
+    font-size: 17px;
 }
 .rightHeader{
     gap: 15px;
@@ -64,7 +72,8 @@ ul li{
 .rightHeader button{
     width: 80px;
     height: 35px;
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
+    border: none;
     color: black;
     border-radius: 9px;
     
@@ -77,8 +86,6 @@ ul li{
     justify-content: space-around;
     padding: 20px;
     margin: auto;
-    /* remove border */
-    border: 2px solid black;
 }
 
 .resume-img img{
@@ -107,15 +114,18 @@ ul li{
 .btns{
     display: flex;
     gap: 1rem;
+    font-size: 20px;
 }
 .btn{
     padding: 15px 50px;
     border: none;
     border-radius: 15px;
-    background-color: antiquewhite;
+    background-color: white;
 }
 
+/* Sections CSS */
 section{
+  width: 80%;
     display: flex;
     justify-content: space-evenly;
     padding: 24px;
@@ -133,8 +143,8 @@ section .sec-content{
 }
 
 .sec-img img{
-    height: 300px;
-    width: 300px;
+    height: 512px;
+    width: 672px;
     border-radius: 20px;
 }
 
@@ -144,9 +154,7 @@ section .sec-content{
 
 
 
-
-/* new data */
-
+/* ATS Score Checker section CSS */
 .ats-section {
     padding: 40px 20px;
     text-align: center;
@@ -248,6 +256,8 @@ section .sec-content{
     font-size: 14px;
   }
 
+
+/* Footer CSS */
   footer{
     display: flex;
     margin: auto;
