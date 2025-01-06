@@ -401,6 +401,55 @@ section .sec-content{
     color: grey;
     font-size: 0.8rem;
   }
+  /* escalator section */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel {
+    display: flex;
+    gap: 10px;
+    animation: slide 20s linear infinite;
+  }
+
+  .carousel a {
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+
+  .carousel img {
+    width: 300px; /* Adjust the width of the images */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.6s ease;
+  }
+
+  .carousel img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Optional: Pause animation on hover */
+  .carousel-container:hover .carousel {
+    animation-play-state: paused;
+  }
 
 
 
