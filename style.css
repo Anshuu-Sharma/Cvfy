@@ -21,8 +21,10 @@
   body{
     width: 100vw;
     height: 100vh;
-    background-image: url('bg1.png');
+    background-image: url("noise-light.png");
+    background-color: #000000;
     background-attachment: fixed;
+    color: white;
 }
 ul li{
     list-style: none;
@@ -33,7 +35,7 @@ ul li{
       
   }
 #header{
-    background-color: rgba(255, 255, 255, 0.551);
+    background-color: rgb(0 0 0 / 53%);
     backdrop-filter: blur(10px);
     margin: 0 auto;
     width: 100%;
@@ -43,8 +45,26 @@ ul li{
     /* Alternative */
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 99;
+    height: 105px;
+    border-bottom: 2px solid white;
 }
+/* 
+.wavy{
+  position: fixed;
+  top: 58px;
+  z-index: 100;
+  
+}
+
+.wavy img{
+
+  height: 68px;
+  background-repeat: repeat-x;
+  width: 100vw;
+
+} */
+
 #main_container{
   display: flex;
   flex-direction: column;
@@ -80,7 +100,7 @@ ul li{
 
 .anchorLinks ul li a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 17px;
 }
 .rightHeader{
@@ -122,7 +142,7 @@ ul li{
 
 .content h1{
     font-size: 50px;
-    color: rgb(45, 54, 57);
+    color: rgb(244, 250, 252);
     font-family: "Rubik", serif;
     font-weight: 500;
 }
@@ -209,8 +229,8 @@ section .sec-content{
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  backdrop-filter: blur(100px);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
