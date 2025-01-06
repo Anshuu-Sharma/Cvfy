@@ -450,7 +450,23 @@ section .sec-content{
   .carousel-container:hover .carousel {
     animation-play-state: paused;
   }
+  .FAQ{
+    width: 80%;
+    height: auto;
+    font-size: 1.1rem;
+    gap: 10px;
+  
+    
+    text-align: auto;
+    
 
+  }
+  
+  summary{
+    color: whitesmoke
+  }
+  
+  
 
 
   
