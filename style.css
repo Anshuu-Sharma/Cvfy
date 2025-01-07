@@ -47,7 +47,7 @@ ul li{
     position: sticky;
     top: 0;
     z-index: 999;
-    border-bottom: 2px solid white;
+    
   
 }
 #main_container{
@@ -141,8 +141,13 @@ ul li{
     gap: 1rem;
     font-size: 20px;
 }
+
+.btns a{
+  text-decoration: none;
+}
 .btn{
-    padding: 15px 50px;
+  width: 200px;
+    padding: 13px 50px;
     border: none;
     border-radius: 15px;
     background-color: white;
@@ -188,7 +193,7 @@ section .sec-content{
 
 
 /* ATS Score Checker section CSS */
-.ats-section {
+/* .ats-section {
     padding: 40px 20px;
     text-align: center;
 
@@ -288,7 +293,7 @@ section .sec-content{
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 14px;
-  }
+  } */
 
 
 /* Footer CSS */

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check the ATS Score of your Resume</title>
+    <link rel="stylesheet" href="ats.css">
+</head>
+<body>
+    <section class="ats-section">
+        <div class="ats-container">
+          <h2>Check Your Resume's ATS Score</h2>
+          <div id="ats-drop-zone" class="ats-drop-zone">
+            <div class="drop-content">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgb(180, 209, 209)' stroke-width='2'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpolyline points='17 8 12 3 7 8'/%3E%3Cline x1='12' y1='3' x2='12' y2='15'/%3E%3C/svg%3E"
+                alt="Upload">
+              <h3>Drag & Drop your resume here</h3>
+              <p>or click to browse</p>
+            </div>
+          </div>
+          <input type="file" id="ats-file-input" class="ats-file-input" accept=".pdf">
+          <div id="ats-loading">
+            <div class="ats-spinner"></div>
+            <p>Analyzing your resume...</p>
+          </div>
+  
+          <div id="ats-results">
+            <h3>Your ATS Compatibility Score</h3>
+            <div id="ats-score" class="ats-score">-</div>
+            <h4>Keywords Found in Your Resume</h4>
+            <div id="ats-keywords" class="keywords-container"></div>
+          </div>
+        </div>
+      </section>
+      <script type="module" src="js/main.js"></script>
+</body>
+</html>
