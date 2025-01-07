@@ -22,7 +22,7 @@
     width: 100vw;
     height: 100vh;
     background-image: url(noise-light.png);
-    background-color: #000000;
+    background-color: #071e82;
     background-attachment: fixed;
     color: white;
 
@@ -91,14 +91,19 @@ ul li{
 .rightHeader{
     gap: 15px;
 }
-.rightHeader button{
-    width: 80px;
+.rightHeader .details{
+    width: 100px;
     height: 35px;
     background-color: rgb(255, 255, 255);
     border: none;
     color: black;
     border-radius: 9px;
     
+}
+
+.details:hover{
+  background-color: #2e0782;
+  color: white;
 }
 
 .first{
@@ -118,11 +123,11 @@ ul li{
 
 .content{
     display: flex;
-    gap: 20px;
+    gap: 6rem;
     flex-direction: column;
     justify-content: center;
-    line-height: 76px;
-    width: 500px;
+    line-height: 60px;
+    width: 700px;
 }
 
 .content h1{
@@ -141,6 +146,12 @@ ul li{
     border: none;
     border-radius: 15px;
     background-color: white;
+    color: black;
+}
+
+.btn:hover{
+  background-color: #2e0782;
+  color: white;
 }
 
 /* Sections CSS */
