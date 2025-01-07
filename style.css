@@ -183,51 +183,7 @@ section .sec-content{
     border: 2px solid gray;
 }
 
-.ats-tracking{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-  color: black;
-  width: 30%;
-  position: relative;
-  left: 100px;
-  top: 2px;
-}
 
-.ats-tracking h2{
-  font-size: 40px;
-  line-height: 46px;
-}
-
-.ats-tracking p{
-  font-size: 28px;
-  line-height: 31px;
-}
-
-.ats-tracking button{
-  padding: 10px;
-  width: 300px;
-  border-radius: 5px;
-}
-.three-sections{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40%;
-  width: 40%;
-}
-.ATS{
-  background-color: #be90ff8e;
-  width: 100vw;
-  height: 50vh;
-  gap: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  backdrop-filter: blur(100px);
-}
 
 
 
