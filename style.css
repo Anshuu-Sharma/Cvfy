@@ -432,7 +432,7 @@ section .sec-content{
   
 
   /* Cover letter CSS */
-  .cover-letter-container{
+  /* .cover-letter-container{
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -729,7 +729,4 @@ button:disabled {
   padding: 1rem;
   border-radius: 0.5rem;
   white-space: pre-wrap;
-}
-
-
-  
+} 
