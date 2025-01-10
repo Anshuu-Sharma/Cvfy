@@ -767,7 +767,6 @@ button:disabled {
   border-radius: 20px;
   background-color: rgb(0, 0, 0);
   overflow: hidden;
-  display: flex;
   flex-direction: column;
   opacity: 1;
   transition: opacity 0.2s ease, transform 0.2s ease;
