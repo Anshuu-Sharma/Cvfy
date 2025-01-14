@@ -1,4 +1,4 @@
-// Initialize the application
+    // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
     initializeDragDrop();
 
