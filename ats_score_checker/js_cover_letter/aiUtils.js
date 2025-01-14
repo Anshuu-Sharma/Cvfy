@@ -1,8 +1,14 @@
 // Generate cover letter using Gemini API
-async function generateCoverLetter(resumeText, jobTitle, company) {
+async function generateCoverLetter(resumeText) {
     try {
         const prompt = `You have to behave as an ats score checker and rate this resume out of 100. 
-        Make it engaging, highlight relevant experience, and keep it under 400 words.
+        You also have to give 5 recommendations on how can I imporove the score.
+        return the answer in the following format:
+        score here out of 100
+        Suggestions:
+        1. ..
+        2. ..
+        so on
         
         Resume content:
         ${resumeText}`;
@@ -25,6 +31,6 @@ async function generateCoverLetter(resumeText, jobTitle, company) {
         return data.candidates[0].content.parts[0].text;
     } catch (error) {
         console.error('AI generation error:', error);
-        throw new Error('Failed to generate cover letter. Please try again.');
+        throw new Error('Failed to generate ATS score. Please try again.');
     }
 }
