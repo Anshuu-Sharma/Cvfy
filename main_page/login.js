@@ -10,3 +10,8 @@ registerbtn.addEventListener('click', ()=>{
 loginbtn.addEventListener('click', ()=>{
     container.classList.remove('active');
 })
+
+const signUp = document.getElementById('signUp');
+signUp.addEventListener('click', (e)=>{
+    e.preventDefault()
+})
