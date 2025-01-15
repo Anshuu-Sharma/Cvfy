@@ -28,15 +28,7 @@
                     <p id="fileName" class="file-name"></p>
                 </div>
 
-                <!-- <div class="form-group">
-                    <label for="jobTitle">Job Title</label>
-                    <input type="text" id="jobTitle" placeholder="e.g. Software Engineer" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="company">Company Name</label>
-                    <input type="text" id="company" placeholder="e.g. Acme Inc" required>
-                </div> -->
+                
 
                 <p id="error" class="error"></p>
 
@@ -45,10 +37,14 @@
                     <span class="loader" hidden></span>
                 </button>
             </form>
-
-            <div id="result" class="result" hidden>
+            
+            <div id="result" hidden>
                 <h2>Generated ATS score</h2>
                 <div id="coverLetter" class="ats-score"></div>
+                <br>
+                <div id="suggestions" class="ats-score suggestions"></div>
+                <br>
+                <div id="missingSkills" class="ats-score missingSkills"></div>
             </div>
         </main>
     </div> 

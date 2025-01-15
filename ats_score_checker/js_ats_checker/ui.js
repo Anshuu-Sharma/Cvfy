@@ -7,7 +7,9 @@ const UI = {
         loader: document.querySelector('.loader'),
         error: document.getElementById('error'),
         result: document.getElementById('result'),
-        coverLetter: document.getElementById('coverLetter')
+        coverLetter: document.getElementById('coverLetter'),
+        suggestions: document.getElementById('suggestions'),
+        missingSkills: document.getElementById('missingSkills')
     },
 
     showLoading() {
@@ -31,5 +33,13 @@ const UI = {
     showResult(coverLetter) {
         this.elements.result.hidden = false;
         this.elements.coverLetter.textContent = coverLetter;
+    },
+    showSuggestions(suggestions) {
+        this.elements.result.hidden = false;
+        this.elements.suggestions.textContent = suggestions;
+    },
+    showMissingSkills(missingSkills) {
+        this.elements.result.hidden = false;
+        this.elements.missingSkills.textContent = missingSkills;
     }
 };

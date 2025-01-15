@@ -18,9 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
             UI.showLoading();
             
             const resumeText = await extractTextFromPDF(fileInput.files[0]);
-            const coverLetter = await generateCoverLetter(resumeText);
+            const { atsScore, suggestions, missingSkills } = await generateCoverLetter(resumeText);
             
-            UI.showResult(coverLetter);
+            UI.showResult(atsScore);
+            UI.showSuggestions(suggestions);
+            UI.showMissingSkills(missingSkills);
         } catch (err) {
             UI.showError(err.message);
         } finally {
