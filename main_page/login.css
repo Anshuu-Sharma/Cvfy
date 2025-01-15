@@ -209,3 +209,13 @@ body{
 }
 
 
+
+.messageDiv{
+    background-color: #2e0782;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+}

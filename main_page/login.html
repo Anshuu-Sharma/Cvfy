@@ -6,11 +6,13 @@
     <title>LogIn Page</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="firebaseauth.js"></script>
 </head>
 <body>
     <div class="container" id="container">
         <div class="sign-up">
-            <form action="">
+            <form action="post">
+                <div id="signUpMessage" class="messageDiv" style="display: none;">Success!</div>
                 <h1>Create Account</h1>
                 <div class="icons">
                     <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
@@ -19,16 +21,17 @@
                     <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
                 </div>
                 <span>or use email for registration</span>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Sign Up</button>
+                <input id="rname" type="text" placeholder="Name">
+                <input id="remail" type="text" placeholder="Email">
+                <input id="rpassword" type="password" placeholder="Password">
+                <button id="signUp">Sign Up</button>
             </form>
         </div>
 
 
         <div class="sign-in">
-            <form action="">
+            <form action="method">
+                <div id="signInMessage" class="messageDiv" style="display: none;"></div>
                 <h1>Sign In</h1>
                 <div class="icons">
                     <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
@@ -37,10 +40,10 @@
                     <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
                 </div>
                 <span>or use email password</span>
-                <input type="text" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input id="email" type="text" placeholder="Email">
+                <input id="password" type="password" placeholder="Password">
                 <a href="#">Forgot password</a>
-                <button>Sign In</button>
+                <button id="signIn">Sign In</button>
             </form>
         </div>
 
