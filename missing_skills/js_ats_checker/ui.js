@@ -1,4 +1,19 @@
 // UI state management
+function makeLinksClickable(text) {
+    return text.replace(/\(([^)]+)\)/g, (match, urls) => {
+        // Split multiple URLs separated by commas
+        const links = urls.split(',').map(url => {
+            let clickableUrl = url.trim();
+            if (!clickableUrl.startsWith("http")) {
+                clickableUrl = " https://" + clickableUrl;
+            }
+            return `<a href="${clickableUrl}" target="_blank">${clickableUrl}</a>`;
+        });
+
+        return `(${links.join(',  ')})`; // Reassemble links inside parentheses
+    });
+}
+
 const UI = {
     elements: {
         form: document.getElementById('coverLetterForm'),
@@ -7,8 +22,8 @@ const UI = {
         loader: document.querySelector('.loader'),
         error: document.getElementById('error'),
         result: document.getElementById('result'),
-        coverLetter: document.getElementById('coverLetter'),
-        suggestions: document.getElementById('suggestions')
+        userSkills: document.getElementById('userSkills'),
+        missingSkills: document.getElementById('missingSkills')
     },
 
     showLoading() {
@@ -28,13 +43,12 @@ const UI = {
         this.elements.error.textContent = message;
         this.elements.result.hidden = true;
     },
-
-    showResult(coverLetter) {
+    showMissingSkills(missingSkills) {
         this.elements.result.hidden = false;
-        this.elements.coverLetter.textContent = coverLetter;
+        this.elements.missingSkills.innerHTML = makeLinksClickable(missingSkills);
     },
-    showSuggestions(suggestions) {
+    showUserSkills(userSkills){
         this.elements.result.hidden = false;
-        this.elements.suggestions.textContent = suggestions;
+        this.elements.userSkills.innerHTML = makeLinksClickable(userSkills);
     }
 };

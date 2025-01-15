@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATS score Generation</title>
-    <link rel="stylesheet" href="ats_css.css">
+    <title>Skills Matcher Generation</title>
+    <link rel="stylesheet" href="missing_skills_css.css">
 </head>
 <body>
-    <div class="ats-score-container">
+    <div class="skills-matcher-container">
         <header>
-          <h1>AI ATS score Generator</h1>
-            <p>Upload your resume and get a personalized ATS score in seconds</p>
+          <h1>AI Skills Matcher</h1>
+            <p>Upload your resume and get a personalized Skills Matcher in seconds</p>
         </header>
 
         <main class="card">
@@ -28,27 +28,32 @@
                     <p id="fileName" class="file-name"></p>
                 </div>
 
+
+                <div class="form-group">
+                    <label for="jobTitle">Job Title</label>
+                    <input type="text" id="jobTitle" placeholder="e.g. Software Engineer" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" placeholder="e.g. Acme Inc" required>
+                </div>
+
                 
 
                 <p id="error" class="error"></p>
 
                 <button type="submit" id="submitBtn">
-                    <span class="btn-text">Generate ATS score</span>
+                    <span class="btn-text">Generate Skills Matcher</span>
                     <span class="loader" hidden></span>
                 </button>
             </form>
-
             
             
             <div id="result" hidden>
-                <h2>Generated ATS score</h2>
-                <div id="coverLetter" class="ats-score"></div>
-                <br>
-                <div id="suggestions" class="ats-score suggestions"></div>
-                <br>
+                <h2>Generated Skills Matcher</h2>
+                <div id="missingSkills" class="skills-matcher missingSkills"></div>
             </div>
-
-            <a href="/missing_skills/missing_skills.html" target="_blank" id="skillBtn"><button>Click here to find the missing skills in your resume</button></a>
         </main>
     </div> 
     <script src="js_ats_checker/config.js"></script>

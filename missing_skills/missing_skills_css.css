@@ -28,7 +28,7 @@ body{
 
 }
   /* Cover letter CSS */
-  .ats-score-container{
+  .skills-matcher-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,8 +144,6 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin-bottom: 5px;
-  text-decoration: none;
 }
 
 button:hover {
@@ -155,9 +153,6 @@ button:hover {
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-}
-#skillBtn{
-  text-decoration: none;
 }
 
 .loader {
@@ -187,7 +182,7 @@ button:disabled {
   margin-bottom: 1rem;
 }
 
-.ats-score {
+.skills-matcher {
   word-wrap: break-word;
   justify-content: center;
   font-size: 30px;
@@ -200,25 +195,3 @@ button:disabled {
   color: red;
   white-space: pre-wrap;
 } 
-.btns{
-  display: flex;
-  gap: 1rem;
-  font-size: 20px;
-}
-
-.btns a{
-text-decoration: none;
-}
-.btn{
-width: 200px;
-  padding: 13px 50px;
-  border: none;
-  border-radius: 15px;
-  background-color: white;
-  color: black;
-}
-
-.btn:hover{
-background-color: #2e0782;
-color: white;
-}
