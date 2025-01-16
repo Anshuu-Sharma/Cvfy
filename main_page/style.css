@@ -104,7 +104,7 @@ ul li{
 } 
 
 .secondsec{
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -134,20 +134,22 @@ ul li{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 165px;
+  position: relative;
+
 }
 
 .boxdrop{
   height: 150px;
   width: 200px;
-  margin-top: 15px;
-  background-color: #071e82;
-  border: 1px solid white;
-  padding: 10px;
+  position: absolute;
+  top: 90px;
+  background-color: #000000;
+  /* border: 1px solid white; */
+  padding: 4px 10px;
   backdrop-filter: blur(10px);
-  display: flex;
+  display: none;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
 }
 
 .boxdrop h4{
@@ -157,8 +159,8 @@ ul li{
 #logout{
   color: #2e0782;
   background-color: #fff;
-  padding: 4px;
-  border-radius: 5px;
+  padding: 10px 15px;
+  border-radius: 10px;
   font-size: 1rem;
   font-weight: bold;
   border: none;
