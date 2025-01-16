@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css" >
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script type="module" src="afterlogin.js"></script>
 </head>
 
 <body>
@@ -88,8 +89,20 @@
           </div>
         </div>
         <div class="rightHeader">
-          <a href="login.html"><button class="details">Sign In</button></a>
-          <a href="login.html"><button class="details">Sign Up</button></a>
+          <div class="firstsec">
+            <a href="login.html"><button class="details">Sign In</button></a>
+            <a href="login.html"><button class="details">Sign Up</button></a>
+          </div>
+          <div class="secondsec">
+            <button class="material-symbols-outlined">Account_Circle</button>
+            <div class="boxdrop">
+              <h4>Welcome</h4>
+              <div>Name: <span id="loggedUserName"></span></div>
+              <!-- <div>Email: <span id="loggedUserEmail"></span></div> -->
+              <button id="logout">Logout</button>
+            </div>
+          </div>
+         
         </div>
       </div>
     </div>
