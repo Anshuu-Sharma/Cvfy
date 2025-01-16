@@ -4,17 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills Matcher Generation</title>
-    <link rel="stylesheet" href="missing_skills_css.css">
+    <link rel="stylesheet" href="roadmap_css.css">
 </head>
 <body>
     <div class="skills-matcher-container">
-        
-        <button style="width: 50px; height: 50px;" id="roadmapClose">CLOSE</button>
-        
-        <div class="roadmap-container" id="roadmap-container">
-            <div class="roadmap" id="roadmapContainer"></div>
-        </div>
-
         <header>
           <h1>AI Skills Matcher</h1>
             <p>Upload your resume and get a personalized Skills Matcher in seconds</p>
@@ -62,15 +55,14 @@
                 <div id="missingSkills" class="skills-matcher missingSkills"></div>
             </div>
 
-        <button id="roadmapBtn" style="display: none;">Click here to get a roadmap to kickstart your learning</button>
+            <a href="/missing_skills/missing_skills.html" target="_blank" id="skillBtn"><button>Click here to get a roadmap to kickstart your learning</button></a>
         </main>
     </div> 
-    <script src="js_ats_checker/config.js"></script>
-    <script src="js_ats_checker/pdfUtils.js"></script>
-    <script src="js_ats_checker/aiUtils.js"></script>
-    <script src="js_ats_checker/dragDrop.js"></script>
-    <script src="js_ats_checker/ui.js"></script>
-    <script src="js_ats_checker/main.js"></script>
-    <script src="js_ats_checker/roadmap.js"></script>
+    <script src="js_roadmap/config.js"></script>
+    <script src="js_roadmap/pdfUtils.js"></script>
+    <script src="js_roadmap/aiUtils.js"></script>
+    <script src="js_roadmap/dragDrop.js"></script>
+    <script src="js_roadmap/ui.js"></script>
+    <script src="js_roadmap/main.js"></script>
 </body>
 </html>

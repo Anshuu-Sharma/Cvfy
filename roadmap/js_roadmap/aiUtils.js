@@ -15,7 +15,7 @@ Missing skills:
 10. Skill_Name10: (https://resource1.com, https://resource2.com)
 
 ### **Important Instructions:**
-- Ensure the links are correct and doesnt give 404 errors and relevant to the missing skills.
+- Ensure the links are correct and relevant to the missing skills.
 - Do NOT add extra text, explanations, or descriptions.
 - Do NOT repeat "https://" twice in the links.
 - Do NOT add skill variations in parentheses (e.g., avoid "https://Git or Mercurial").
