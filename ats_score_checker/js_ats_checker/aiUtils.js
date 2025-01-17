@@ -3,12 +3,12 @@
 async function generateCoverLetter(resumeText) {
     try {
         const prompt1 = `You have to behave as an ats score checker and rate this resume out of 100. 
-        return only in this format:
+        return only in this format:(Dont give text in bold or italics)
         score_here/100
         Resume content:
         ${resumeText}`;
 
-        const prompt2 = `Analyze this resume and based on it give suggestions on how one can improve it (make sure that I have given you text only, so don't give suggestions on the structure and format because you can't see it).
+        const prompt2 = `Analyze this resume and based on it give suggestions on how one can improve it (make sure that I have given you text only, so don't give suggestions on the structure and format because you can't see it).(Dont give text in bold or italics)
         
         Give in this format:
         Suggestions(give 5):

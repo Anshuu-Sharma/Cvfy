@@ -9,10 +9,10 @@ async function generateCoverLetter(resumeText, jobTitle, company) {
 2 **Format the output exactly as follows (without extra text or explanation):**
 
 Missing skills:
-1. Skill_Name1: (https://resource1.com, https://resource2.com)
-2. Skill_Name2: (https://resource1.com, https://resource2.com)
+1. Skill_Name1: (<paste her the link1>, <paste here the  link 2>)
+2. Skill_Name2: (<paste her the link1>, <paste here the  link 2>)
 ...
-10. Skill_Name10: (https://resource1.com, https://resource2.com)
+10. Skill_Name10: (<paste her the link1>, <paste here the  link 2>)
 
 ### **Important Instructions:**
 - Ensure the links are correct and doesnt give 404 errors and relevant to the missing skills.
