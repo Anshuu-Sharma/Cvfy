@@ -143,16 +143,10 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    gap: 5px;
+    /* background-color: #fff; */
     top: 18%;
-    right: 14%;
-    margin-bottom: 44px;
-
-}
-
-.messageDiv{
-    position: absolute;
-    top: -50%;
+    right: 12%;
+    margin-bottom: 34px;
 
 }
 
@@ -194,8 +188,6 @@ body{
     margin-bottom: 34px;
 }
 
-
-
 #google span{
     text-transform: initial;
     font-size: 13px;
@@ -205,7 +197,6 @@ body{
 #google2 span{
     text-transform: initial;
     font-size: 13px;
-    font-weight: 500;
 }
 
 
