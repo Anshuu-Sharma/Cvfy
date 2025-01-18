@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn Page</title>
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="module" src="firebaseauth.js"></script>
 </head>
+
 <body>
     <div class="container" id="container">
         <div class="sign-up">
-            <form action="post">
+            <div class="upper">
                 <div id="signUpMessage" class="messageDiv" style="display: none;">Success!</div>
                 <h1>Create Account</h1>
-                <div class="icons">
+
+                <button id="google2">
+                    <img width="30" src="google.png" alt="">
+                    <span>Continue with Google</span>
+                </button>
+            </div>
+
+
+            <!-- <div class="icons">
                     <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                </div>
+                </div> -->
+
+            <form class="signupform" action="post" method="POST">
                 <span>or use email for registration</span>
                 <input id="rname" type="text" placeholder="Name">
                 <input id="remail" type="text" placeholder="Email">
@@ -30,19 +44,25 @@
 
 
         <div class="sign-in">
-            <form action="method">
+            <div class="lower">
                 <div id="signInMessage" class="messageDiv" style="display: none;"></div>
                 <h1>Sign In</h1>
-                <div class="icons">
+
+                <button id="google">
+                    <img width="30" src="google.png" alt="">
+                    <span>Continue with Google</span>
+                </button>
+            </div>
+            <!-- <div class="icons">
                     <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                </div>
+                </div> -->
+            <form class="signinform" action="method">
                 <span>or use email password</span>
                 <input id="email" type="text" placeholder="Email">
                 <input id="password" type="password" placeholder="Password">
-                <a href="#">Forgot password</a>
                 <button id="signIn">Sign In</button>
             </form>
         </div>
@@ -64,4 +84,5 @@
     </div>
     <script src="login.js"></script>
 </body>
+
 </html>

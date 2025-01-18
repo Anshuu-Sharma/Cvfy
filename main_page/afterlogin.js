@@ -1,8 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
-import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-import { getFirestore, getDoc, doc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"
-
+import { getAuth, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getFirestore, getDoc, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAIMWero_vAVT9tuSWsf3ZfMXVMCkn7oo8",
@@ -14,50 +13,108 @@ const firebaseConfig = {
   measurementId: "G-5FZ2GD74DM"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth()
-const db = getFirestore()
+const auth = getAuth(app);
+const db = getFirestore(app);
 
+
+const firstsec = document.querySelector('.firstsec');
+const secondsec = document.querySelector('.secondsec');
 const logoutbutton = document.getElementById('logout');
-const firstsec = document.querySelector('.firstsec')
-const secondsec = document.querySelector('.secondsec')
-onAuthStateChanged(auth, (user) => {
-    const loggedInUserId = localStorage.getItem("loggedInUserId")
-    if (loggedInUserId) {
-        const docRef = doc(db, "users", loggedInUserId);
-        getDoc(docRef)
-            .then((docSnap) => {
-                if (docSnap.exists()) {
-                    const userData = docSnap.data()
-                    document.getElementById('loggedUserName').innerText = userData.name;
-                    firstsec.style.display = 'none'
-                    secondsec.style.display = 'flex'
-                    
-                }
+const google_login = document.getElementById('google');
+const google_signup = document.getElementById('google2')
 
-                else {
-                    console.log("No document found matching id")
-                    firstsec.style.display = 'flex'
-                    secondsec.style.display = 'none'
-                }
-            })
-            .catch((error) => {
-                console.log("Error getting document")
-                firstsec.style.display = 'flex'
-                secondsec.style.display = 'none'
-            })
-    }
 
-    else {
-        console.log("User Id not found in local storage")
-        if(firstsec && secondsec){
-          firstsec.style.display = 'flex'
-          secondsec.style.display = 'none'
-        }
-    }
-})
+function updateUserProfile(user) {
+  if (user) {
+    const displayName = user.displayName || "User";
+    document.getElementById('loggedUserName').innerText = displayName;
+    firstsec.style.display = 'none';
+    secondsec.style.display = 'flex';
+  } else {
+    firstsec.style.display = 'flex';
+    secondsec.style.display = 'none';
+  }
+}
+
+
+// onAuthStateChanged(auth, async (user) => {
+//   if (user) {
+//     try {
+//       const docRef = doc(db, "users", user.uid);
+//       let docSnap = await getDoc(docRef);
+
+//       if (!docSnap.exists() && user.displayName) {
+//         const newUserData = {
+//           name: user.displayName,
+//           email: user.email,
+//         };
+//         await setDoc(docRef, newUserData);
+//         docSnap = { exists: true, data: () => newUserData };
+//       }
+
+//       if (docSnap.exists()) {
+//         const userData = docSnap.data();
+//         document.getElementById('loggedUserName').innerText = userData.name;
+//         firstsec.style.display = 'none';
+//         secondsec.style.display = 'flex';
+//       } else {
+//         console.warn("User document not found.");
+//         updateUserProfile(null);
+//       }
+//     } catch (error) {
+//       console.error("Error fetching user data:", error);
+//       updateUserProfile(null);
+//     }
+//   } else {
+//     console.log("No user is signed in.");
+//     updateUserProfile(null);
+//   }
+// });
+
+// Listening for authentication state changes
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+      try {
+          const docRef = doc(db, "users", user.uid);
+          let docSnap = await getDoc(docRef);
+
+          // If it's the first time the user is logging in (either via sign-up or Google sign-in)
+          if (!docSnap.exists()) {
+              console.log("First-time sign-in. Creating Firestore document...");
+
+              // Create user data object for new user
+              const newUserData = {
+                  name: user.displayName || "New User", // Google sign-in might not have displayName
+                  email: user.email,
+                  createdAt: new Date(),
+              };
+
+              // Create user document in Firestore
+              await setDoc(docRef, newUserData);
+              docSnap = { exists: true, data: () => newUserData }; // Simulate document for UI update
+          }
+
+          if (docSnap.exists()) {
+              const userData = docSnap.data();
+              document.getElementById('loggedUserName').innerText = userData.name;
+              firstsec.style.display = 'none';
+              secondsec.style.display = 'flex';
+          }
+      } catch (error) {
+          console.error("Error handling user data:", error);
+          firstsec.style.display = 'flex';
+          secondsec.style.display = 'none';
+      }
+  } else {
+      console.log("No user signed in.");
+      firstsec.style.display = 'flex';
+      secondsec.style.display = 'none';
+  }
+});
+
 
 
 
@@ -106,4 +163,6 @@ onAuthStateChanged(auth, (user) => {
       console.error('Dropdown element not found.');
     }
   });
-  
+
+
+

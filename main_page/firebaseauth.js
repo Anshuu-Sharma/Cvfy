@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
-import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import {getAuth, GoogleAuthProvider,  createUserWithEmailAndPassword, signInWithPopup, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 import {getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -100,3 +100,50 @@ signIn.addEventListener('click', (event)=>{
         }
     })
 })
+
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+const google_login = document.getElementById('google');
+const google_signup = document.getElementById('google2')
+
+
+if (google_login) {
+    google_login.addEventListener('click', () => {
+        console.log('Google login clicked');
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user;
+                console.log('User logged in:', user);
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 500);
+            })
+            .catch((error) => {
+                console.error('Error during sign-in:', error);
+            });
+    });
+} else {
+    console.error('Google login button not found');
+}
+
+
+if(google_signup){
+    google_signup.addEventListener('click', ()=>{
+        console.log('Google Sign up clicked')
+        signInWithPopup(auth, provider)
+            .then((result)=>{
+                const user = result.user;
+                console.log('User logged in:', user);
+                setTimeout(() => {
+                    window.location.href = 'index.html'
+                }, 500);
+            })
+            .catch((error)=>{
+                console.log("Error during sign up", error)
+            })
+        
+    })
+}
+else{
+    console.log("Google signup not founc")
+}
