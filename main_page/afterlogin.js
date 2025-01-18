@@ -40,41 +40,9 @@ function updateUserProfile(user) {
 }
 
 
-// onAuthStateChanged(auth, async (user) => {
-//   if (user) {
-//     try {
-//       const docRef = doc(db, "users", user.uid);
-//       let docSnap = await getDoc(docRef);
 
-//       if (!docSnap.exists() && user.displayName) {
-//         const newUserData = {
-//           name: user.displayName,
-//           email: user.email,
-//         };
-//         await setDoc(docRef, newUserData);
-//         docSnap = { exists: true, data: () => newUserData };
-//       }
 
-//       if (docSnap.exists()) {
-//         const userData = docSnap.data();
-//         document.getElementById('loggedUserName').innerText = userData.name;
-//         firstsec.style.display = 'none';
-//         secondsec.style.display = 'flex';
-//       } else {
-//         console.warn("User document not found.");
-//         updateUserProfile(null);
-//       }
-//     } catch (error) {
-//       console.error("Error fetching user data:", error);
-//       updateUserProfile(null);
-//     }
-//   } else {
-//     console.log("No user is signed in.");
-//     updateUserProfile(null);
-//   }
-// });
 
-// Listening for authentication state changes
 onAuthStateChanged(auth, async (user) => {
   if (user) {
       try {
@@ -114,7 +82,6 @@ onAuthStateChanged(auth, async (user) => {
       secondsec.style.display = 'none';
   }
 });
-
 
 
 
