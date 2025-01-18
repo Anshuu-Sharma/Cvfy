@@ -15,7 +15,7 @@
     width: 100vw;
     height: 100vh;
     background-image: url(noise-light.png);
-    background-color: #071e82;
+    background-color: #000000;
     background-attachment: fixed;
     color: white;
 
@@ -952,9 +952,41 @@ body.show-emoji-picker em-emoji-picker {
     border-radius: 40px;
 }
 
+/* First section css */
 .aboutCvfy{
+  padding: 0px 100px;
   background-color: #000000;
-  height: 80vh;
   display: flex;
-  gap: 5rem;
+  flex-direction: column;
+  gap: 10rem;
+  align-items: center;
+  position: relative;
+}
+.about{
+  display: flex;
+  gap:7rem;
+  width: 100%;
+  height: 90vh;
+}
+.aboutCvfyLeft{
+  color: white;
+  font-size: 200px;
+  padding: 10px 30px;
+  letter-spacing: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+.aboutCvfyRight{
+  display: flex;
+  flex-direction: column;
+
+}
+.aboutCvfyRightHeading{
+  font-size: 100px;
+  font-weight: 800;
+}
+.aboutCvfyRightInfo{
+  font-size: 20px;
 }
