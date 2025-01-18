@@ -46,7 +46,7 @@ ul li{
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 999999;
 }
 .logoBox{
     display: flex;
@@ -419,13 +419,13 @@ section .sec-content{
 /* chat bot css */
 /* Toggle up and down the chatbot */
 #chat-bot-container-toggle-up {
-  z-index: 99999;
+  z-index: 999999;
   position: fixed;
   width: 70px;
   bottom: 20px;
   padding: 20px;
-  background-color: #a781d0;
-  border-radius: 50px;
+  background-color: #ffffff;
+  border-radius: 70px;
   right: 25px;
   cursor: pointer;
   border: none;
@@ -438,7 +438,7 @@ section .sec-content{
 }
 
 .chat-bot-main-container {
-  z-index: 99999;
+  z-index: 999999;
   display: none;
   position: fixed;
   bottom: 100px;
