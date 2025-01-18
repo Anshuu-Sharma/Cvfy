@@ -15,7 +15,7 @@
     width: 100vw;
     height: 100vh;
     background-image: url(noise-light.png);
-    background-color: #071e82;
+    background-color: #000000;
     background-attachment: fixed;
     color: white;
 
@@ -46,7 +46,7 @@ ul li{
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 999999;
 }
 .logoBox{
     display: flex;
@@ -120,6 +120,7 @@ ul li{
 .rightHeader .details:hover{
   background-color: #1a1a1a;
   color: white;
+  cursor: pointer;
 }
 .firstsec{
   display: flex;
@@ -136,9 +137,7 @@ ul li{
 
 }
 
-.hidden{
-  display: none !important;
-}
+
 
 .secondsec .material-symbols-outlined{
   background: #fff;
@@ -250,6 +249,7 @@ ul li{
 .btn:hover{
   background-color: #2e0782;
   color: white;
+  
 }
 
 /* Sections CSS */
@@ -419,13 +419,13 @@ section .sec-content{
 /* chat bot css */
 /* Toggle up and down the chatbot */
 #chat-bot-container-toggle-up {
-  z-index: 99999;
+  z-index: 999999;
   position: fixed;
   width: 70px;
   bottom: 20px;
   padding: 20px;
-  background-color: #a781d0;
-  border-radius: 50px;
+  background-color: #ffffff;
+  border-radius: 70px;
   right: 25px;
   cursor: pointer;
   border: none;
@@ -438,7 +438,7 @@ section .sec-content{
 }
 
 .chat-bot-main-container {
-  z-index: 99999;
+  z-index: 999999;
   display: none;
   position: fixed;
   bottom: 100px;
@@ -951,21 +951,19 @@ body.show-emoji-picker em-emoji-picker {
     height: 40px;
     border-radius: 40px;
 }
- 
-/* faq section */
 .faq-container {
   display: flex;
-  width: 100%;
+  width: 1000px;
   max-width: 1200px;
   margin: auto;
-  background-color: #0f0e0e;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 .faq-image {
   flex: 1;
-  background-color: #0b0c0c;
+  background-color: #e6f4ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1025,4 +1023,7 @@ details summary:hover {
   margin: 0;
   border-radius: 5px;
   color: #333;
+}
+.frequentl-asked{
+  display: flex;
 }
