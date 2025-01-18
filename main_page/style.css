@@ -1186,14 +1186,17 @@ details summary:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 30px;
+  justify-content: center;
   align-items: center;
   text-align: center;
   transition: opacity 0.5s ease;
 }
+
+
 
 .description {
   position: absolute;
@@ -1282,17 +1285,30 @@ details summary:hover {
   margin-right: 8px;
 }
 
-.cta {
+.cta{
   background: white;
-  padding: 10px 20px;
+  padding: 10px 100px;
   border-radius: 50px;
+  position: relative;
+  z-index: 10;
   font-weight: bold;
   color: #333;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cta:hover {
-  background: #333;
-  color: white;
+
+.cta a{
+  text-decoration: none;
+  color:#000;
+  font-size: 20px;
+}
+
+
+
+
+.card:hover .cta{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
