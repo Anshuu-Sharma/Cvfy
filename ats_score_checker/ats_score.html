@@ -7,16 +7,23 @@
     <link rel="stylesheet" href="ats_css.css">
 </head>
 <body>
-    <div class="ats-score-container">
-        <header>
-          <h1>AI ATS score Generator</h1>
-            <p>Upload your resume and get a personalized ATS score in seconds</p>
-        </header>
+    <header>
+      <h1>ATS Score Generator</h1>
+        <p>Upload your resume and get a personalized ATS score in seconds</p>
+    </header>
 
+
+    <div class="ats-score-container">
+        <div class="ats-score-hero">
+            Steps:
+            <div>1. Drag and Drop your resume</div>
+            <div>2. Make sure you upload a valid pdf</div>
+            <div>3. Click on Generate ATS score</div>
+            <div>4. Check your score and share with your friends!</div>
+        </div>
         <main class="card">
             <form id="coverLetterForm">
                 <div class="form-group">
-                    <label>Resume</label>
                     <div id="dropZone" class="drop-zone">
                         <div class="drop-zone-content">
                             <div class="icon">📁</div>
@@ -28,8 +35,6 @@
                     <p id="fileName" class="file-name"></p>
                 </div>
 
-                
-
                 <p id="error" class="error"></p>
 
                 <button type="submit" id="submitBtn">
@@ -38,8 +43,6 @@
                 </button>
             </form>
 
-            
-            
             <div id="result" hidden>
                 <h2>Generated ATS score</h2>
                 <div id="coverLetter" class="ats-score"></div>

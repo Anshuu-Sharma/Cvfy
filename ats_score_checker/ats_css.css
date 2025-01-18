@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   --primary: #2563eb;
   --primary-hover: #1d4ed8;
@@ -15,14 +15,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Rubik", serif;    
+    font-family: "poppins";
 }
 
 body{
+  padding: 50px;
     width: 100vw;
     height: 100vh;
     background-image: url(noise-light.png);
-    background-color: #071e82;
+    background-color: #000000;
     background-attachment: fixed;
     color: rgb(0, 0, 0);
 
@@ -30,31 +31,50 @@ body{
   /* Cover letter CSS */
   .ats-score-container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
     align-items: center;
     gap: 1rem;
-    background-color: white;
-    max-width: 1500px;
+    background-color: rgb(255, 255, 255);
+    /* max-width: 1500px; */
     max-height: 1500px;
-    margin: 105px auto;
+    margin: 0px auto;
     border: 2px solid black;
     /* overflow-y: scroll; */
     border-radius: 10px;
     padding: 20px;
     margin-top: 0;
-    header{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      
+    
+  }
+  .ats-score-hero{
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    margin: 50px;
+    margin-left: 30px;
+    line-height: 5rem;
+    font-weight: 700;
+    div{
+      font-weight: 500;
+      font-size: 50px;
+
     }
+  }
+  header{
+    color: white;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+      font-size: 25px;
+    }
+    
   }
 
 
 .card {
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -65,15 +85,8 @@ body{
   margin-bottom: 1.5rem;
 }
 
-label {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--gray-700);
-  margin-bottom: 0.5rem;
-}
 
-input[type="text"] {
+/* input[type="text"] {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid var(--gray-300);
@@ -85,7 +98,7 @@ input[type="text"]:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-}
+} */
 
 .drop-zone {
   border: 2px dashed var(--gray-300);
@@ -98,7 +111,7 @@ input[type="text"]:focus {
 
 .drop-zone:hover,
 .drop-zone.dragging {
-  border-color: var(--primary);
+  border-color: rgb(25, 0, 255);
   background-color: rgba(37, 99, 235, 0.05);
 }
 
@@ -133,7 +146,7 @@ input[type="text"]:focus {
 button {
   width: 100%;
   padding: 0.5rem 1rem;
-  background-color: var(--primary);
+  background-color: rgb(25, 0, 255);
   color: white;
   border: none;
   border-radius: 0.375rem;
