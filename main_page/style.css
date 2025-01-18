@@ -120,6 +120,7 @@ ul li{
 .rightHeader .details:hover{
   background-color: #1a1a1a;
   color: white;
+  cursor: pointer;
 }
 .firstsec{
   display: flex;
@@ -136,9 +137,7 @@ ul li{
 
 }
 
-.hidden{
-  display: none !important;
-}
+
 
 .secondsec .material-symbols-outlined{
   background: #fff;
@@ -250,6 +249,7 @@ ul li{
 .btn:hover{
   background-color: #2e0782;
   color: white;
+  
 }
 
 /* Sections CSS */
