@@ -1,7 +1,7 @@
     // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
     initializeDragDrop();
-
+    
     UI.elements.form.addEventListener('submit', async (e) => {
         e.preventDefault();
 

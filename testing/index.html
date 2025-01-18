@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Section</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gauge | CSS Animation</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-
-    <section class="hero">
-        <div class="text-container">
-            <img src="random1.avif" alt="">
-            <!-- <div class="hero-text first">CVfy</div>
-            <div class="hero-text second">Simplify </div> -->
+    <div class="gauge">
+        <div class="gauge__body">
+          <div class="gauge__fill"></div>
+          <div class="gauge__cover"></div>
         </div>
-        <div class="decorations">
-            
-            <img src="star2.svg" alt="Blue Star" class="star blue">
-            <img src="star1.svg" alt="White Star" class="star white">
-            <img src="face.svg" alt="Face" class="face">
-        </div>
-    </section>
+      </div>
+      <script>
+        const gaugeElement = document.querySelector(".gauge");
 
+function setGaugeValue(gauge, value) {
+  if (value < 0 || value > 1) {
+    return;
+  }
+
+  gauge.querySelector(".gauge__fill").style.transform = `rotate(${
+    value / 2
+  }turn)`;
+  gauge.querySelector(".gauge__cover").textContent = `${Math.round(
+    value * 100
+  )}%`;
+}
+
+setGaugeValue(gaugeElement, 1);
+
+      </script>
 </body>
+
 </html>

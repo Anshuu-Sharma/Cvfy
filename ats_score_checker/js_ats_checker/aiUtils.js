@@ -39,7 +39,8 @@ async function generateCoverLetter(resumeText) {
             throw new Error('Failed to generate content');
         }
 
-        document.querySelector("#coverLetterForm").style.display = "none";
+        document.querySelector(".card").style.display = "none";
+        document.querySelector(".ats-score-hero").style.display = "none";
 
         // Parse JSON responses
         const data1 = await response1.json();
@@ -55,39 +56,3 @@ async function generateCoverLetter(resumeText) {
         throw new Error('Failed to generate ATS score and suggestions. Please try again.');
     }
 }
-
-
-
-// async function suggestions(resumeText) {
-//     try {
-//         const prompt = `Analyze this resume and based on it give suggestions on how one can improve it(make sure that i have given you text only so dont give suggestions on the structure and format because you cant see it)
-
-//         Suggestions:
-//         1. ..
-//         2. ..
-//         so on
-        
-//         Resume content:
-//         ${resumeText}`;
-
-//         const response = await fetch(`${CONFIG.API_URL}?key=${CONFIG.API_KEY}`, {
-//             method: 'POST',
-//             headers: { 'Content-Type': 'application/json' },
-//             body: JSON.stringify({
-//                 contents: [{
-//                     parts: [{ text: prompt }]
-//                 }]
-//             })
-//         });
-
-//         if (!response.ok) {
-//             throw new Error('Failed to generate Suggestions');
-//         }
-//         // document.querySelector("#coverLetterForm").style.display = "none";
-//         const data = await response.json();
-//         return data.candidates[0].content.parts[0].text;
-//     } catch (error) {
-//         console.error('AI generation error:', error);
-//         throw new Error('Failed to generate Suggestions. Please try again.');
-//     }
-// }

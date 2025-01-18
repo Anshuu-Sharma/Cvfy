@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills Matcher Generation</title>
     <link rel="stylesheet" href="missing_skills_css.css">
 </head>
+
 <body>
+    <img src="star1.svg" class="star white" alt="">
+    <img src="random1.avif" alt="" class="el1">
+    <img src="random2.avif" alt="" class="el2">
+
+    <!-- Heading for Missing Skill section  -->
+    <header>
+        <h1>Skills Matcher</h1>
+        <p>Upload your resume and get a personalized Skills Matcher in seconds</p>
+    </header>
+
+    <!-- Skill Matcher Container  -->
     <div class="skills-matcher-container">
-        
+
         <button style="width: 50px; height: 50px;" id="roadmapClose">CLOSE</button>
 
         <div class="roadmap-container" id="roadmap-container">
             <div class="roadmap" id="roadmapContainer"></div>
         </div>
 
-        <header>
-          <h1>AI Skills Matcher</h1>
-            <p>Upload your resume and get a personalized Skills Matcher in seconds</p>
-        </header>
+        <div class="ats-score-hero">
+            Steps:
+            <div>1. Drag and Drop your resume</div>
+            <div>2. Make sure you upload a valid pdf</div>
+            <div>3. Click on Generate Cover Letter</div>
+            <div>4. Check the missing skills and start learning!</div>
+        </div>
 
         <main class="card">
             <form id="coverLetterForm">
                 <div class="form-group">
-                    <label>Resume</label>
                     <div id="dropZone" class="drop-zone">
                         <div class="drop-zone-content">
                             <div class="icon">📁</div>
@@ -46,7 +61,7 @@
                     <input type="text" id="company" placeholder="e.g. Acme Inc" required>
                 </div>
 
-                
+
 
                 <p id="error" class="error"></p>
 
@@ -55,16 +70,14 @@
                     <span class="loader" hidden></span>
                 </button>
             </form>
-            
-            
-            <div id="result" hidden>
-                <h2>Generated Skills Matcher</h2>
-                <div id="missingSkills" class="skills-matcher missingSkills"></div>
-            </div>
-
-        <button id="roadmapBtn" style="display: none;">Click here to get a roadmap to kickstart your learning</button>
         </main>
-    </div> 
+        <div id="result" hidden>
+            <h2 style="text-align: center;">Matched Skills</h2>
+            <div id="missingSkills" class="skills-matcher missingSkills"></div>
+            <button id="roadmapBtn" style="display: none;">Click here to get a roadmap to kickstart your
+                learning</button>
+        </div>
+    </div>
     <script src="/missing_skills/missing_skills_js/config.js"></script>
     <script src="missing_skills_js/pdfUtils.js"></script>
     <script src="missing_skills_js/aiUtils.js"></script>
@@ -73,4 +86,5 @@
     <script src="missing_skills_js/main.js"></script>
     <script src="missing_skills_js/roadmap.js"></script>
 </body>
+
 </html>

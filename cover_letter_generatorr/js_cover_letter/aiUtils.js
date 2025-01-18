@@ -20,7 +20,9 @@ async function generateCoverLetter(resumeText, jobTitle, company) {
         if (!response.ok) {
             throw new Error('Failed to generate cover letter');
         }
-        document.querySelector("#coverLetterForm").style.display = "none";
+        document.querySelector(".card").style.display = "none";
+        document.querySelector(".ats-score-hero").style.display = "none";
+        
         const data = await response.json();
         return data.candidates[0].content.parts[0].text;
     } catch (error) {

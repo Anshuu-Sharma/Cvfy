@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATS score Generation</title>
     <link rel="stylesheet" href="ats_css.css">
 </head>
+
 <body>
+    <img src="star1.svg" class="star white" alt="">
+    <img src="random1.avif" alt="" class="el1">
+    <img src="random2.avif" alt="" class="el2">
+
+    <!-- Heading for ATS section  -->
     <header>
-      <h1>ATS Score Generator</h1>
+        <h1>ATS Score Generator</h1>
         <p>Upload your resume and get a personalized ATS score in seconds</p>
     </header>
 
-
+    <!-- Ats Main Container -->
     <div class="ats-score-container">
         <div class="ats-score-hero">
             Steps:
@@ -41,19 +48,19 @@
                     <span class="btn-text">Generate ATS score</span>
                     <span class="loader" hidden></span>
                 </button>
+                <a href="/missing_skills/missing_skills.html" target="_blank" id="skillBtn"><button>Click here to find the missing skills in your resume</button></a>
             </form>
-
-            <div id="result" hidden>
-                <h2>Generated ATS score</h2>
-                <div id="coverLetter" class="ats-score"></div>
-                <br>
-                <div id="suggestions" class="ats-score suggestions"></div>
-                <br>
-            </div>
-
-            <a href="/missing_skills/missing_skills.html" target="_blank" id="skillBtn"><button>Click here to find the missing skills in your resume</button></a>
         </main>
-    </div> 
+        <div id="result" hidden>
+            <h2>Generated ATS score</h2>
+            <div id="coverLetter" class="ats-score score"></div>
+            <br>
+            <div id="suggestions" class="ats-score suggestions"></div>
+            <br>
+            <a href="/missing_skills/missing_skills.html" target="_blank" id="skillBtn"><button>Click here to find the missing skills in your resume</button></a>
+        </div>
+    </div>
+
     <script src="/config.js"></script>
     <script src="js_ats_checker/pdfUtils.js"></script>
     <script src="js_ats_checker/aiUtils.js"></script>
@@ -61,4 +68,5 @@
     <script src="js_ats_checker/ui.js"></script>
     <script src="js_ats_checker/main.js"></script>
 </body>
+
 </html>

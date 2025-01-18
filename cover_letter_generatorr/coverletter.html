@@ -7,16 +7,28 @@
     <link rel="stylesheet" href="cover.css">
 </head>
 <body>
-    <div class="cover-letter-container">
-        <header>
-          <h1>AI Cover Letter Generator</h1>
-            <p>Upload your resume and get a personalized cover letter in seconds</p>
-        </header>
+    <img src="star1.svg" class="star white" alt="">
+    <img src="random1.avif" alt="" class="el1">
+    <img src="random2.avif" alt="" class="el2">
+    
+    <!-- Heading for Cover Letter section -->
+    <header>
+      <h1>AI Cover Letter Generator</h1>
+        <p>Upload your resume and get a personalized cover letter in seconds</p>
+    </header>
 
+    <!-- Cover Letter Containr  -->
+    <div class="cover-letter-container">
+        <div class="ats-score-hero">
+            Steps:
+            <div>1. Drag and Drop your resume</div>
+            <div>2. Make sure you upload a valid pdf</div>
+            <div>3. Click on Generate Cover Letter</div>
+            <div>4. Create your cover letter and start applying!</div>
+        </div>
         <main class="card">
             <form id="coverLetterForm">
                 <div class="form-group">
-                    <label>Resume</label>
                     <div id="dropZone" class="drop-zone">
                         <div class="drop-zone-content">
                             <div class="icon">📁</div>
@@ -45,13 +57,14 @@
                     <span class="loader" hidden></span>
                 </button>
             </form>
-
-            <div id="result" class="result" hidden>
-                <h2>Generated Cover Letter</h2>
-                <div id="coverLetter" class="cover-letter"></div>
-            </div>
         </main>
+
+        <div id="result" class="result" hidden>
+            <h2>Your Cover Letter</h2>
+            <div id="coverLetter" class="cover-letter"></div>
+        </div>
     </div> 
+    
     <script src="/config.js"></script>
     <script src="js_cover_letter/pdfUtils.js"></script>
     <script src="js_cover_letter/aiUtils.js"></script>

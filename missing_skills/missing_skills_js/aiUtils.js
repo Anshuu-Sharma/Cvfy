@@ -41,7 +41,8 @@ ${resumeText}`;
             throw new Error('Failed to generate content');
         }
 
-        document.querySelector("#coverLetterForm").style.display = "none";
+        document.querySelector(".card").style.display = "none";
+        document.querySelector(".ats-score-hero").style.display = "none";
 
         // Parse JSON responses
         const data1 = await response1.json();
