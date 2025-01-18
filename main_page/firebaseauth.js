@@ -151,5 +151,5 @@ if(google_signup){
     })
 }
 else{
-    console.log("Google signup not founc")
+    console.log("Google signup not foun")
 }
