@@ -441,6 +441,7 @@ section .sec-content{
 .chat-bot-main-container {
   z-index: 999999;
   display: none;
+  border: 2px solid rgb(54, 54, 54);
   position: fixed;
   bottom: 100px;
   right: 30px;
@@ -1040,14 +1041,19 @@ details summary:hover {
   gap: 10rem;
   align-items: center;
   position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 .about{
   display: flex;
   gap:7rem;
   width: 100%;
-  height: 90vh;
+  
 }
 .aboutCvfyLeft{
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
   color: white;
   font-size: 200px;
   padding: 10px 30px;
@@ -1056,6 +1062,7 @@ details summary:hover {
   justify-content: center;
   align-items: center;
   width: 300px;
+  transition-delay: 0.1s;
 }
 .aboutCvfyRight{
   display: flex;
@@ -1065,7 +1072,70 @@ details summary:hover {
 .aboutCvfyRightHeading{
   font-size: 100px;
   font-weight: 800;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  transition-delay: 0.3s;
 }
 .aboutCvfyRightInfo{
-  font-size: 20px;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  transition-delay: 0.5s;
+}
+
+.aboutCvfyLeft.in-view, .aboutCvfyRightInfo.in-view, .aboutCvfyRightHeading.in-view{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+.aboutCvfyRightInfo ul li::marker{
+  color: white;
+}
+
+.aboutCvfyRightInfo ul li{
+  margin-bottom: 15px;
+}
+
+
+.checkerbtn{
+  padding: 15px 35px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #1A1A1A;
+  font-size: 19px;
+}
+
+
+
+.checkerbtn:hover{
+  cursor: pointer;
+  background-color: #1900FF;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+.about1{
+  margin-top: 10rem;
+}
+
+.infoimg{
+  width: 700px;
+  height: 400px;
+  border: 2px solid rgb(54, 54, 54);
+}
+
+.chatbot{
+  width: 400px;
 }
