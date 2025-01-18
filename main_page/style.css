@@ -814,3 +814,12 @@ body.show-emoji-picker em-emoji-picker {
         transform: rotate(360deg);
     }
 }
+
+
+/* First Section  */
+.aboutCvfy{
+  background-color: #000000;
+  height: 80vh;
+  display: flex;
+  gap: 5rem
+}
