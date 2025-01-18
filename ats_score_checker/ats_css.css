@@ -32,23 +32,32 @@ body{
   .ats-score-container{
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-around;
+    /* justify-content: space-between; */
     align-items: center;
     gap: 1rem;
     background-color: rgb(255, 255, 255);
-    max-width: 1500px;
+    /* max-width: 1500px; */
     max-height: 1500px;
-    margin: 105px auto;
+    margin: 0px auto;
     border: 2px solid black;
     /* overflow-y: scroll; */
     border-radius: 10px;
     padding: 20px;
     margin-top: 0;
+    
   }
   .ats-score-hero{
     color: rgb(0, 0, 0);
     font-size: 50px;
-    width: 500px;
+    margin: 50px;
+    margin-left: 30px;
+    line-height: 5rem;
+    font-weight: 700;
+    div{
+      font-weight: 500;
+      font-size: 50px;
+
+    }
   }
   header{
     color: white;
