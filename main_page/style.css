@@ -71,12 +71,6 @@ ul li{
     font-size: 30px;
     font-family: "Alumni Sans Pinstripe";
 }
-@keyframes letterSpacing {
-  0% { letter-spacing: 0px; }
-  50% { letter-spacing: 2px; }
-  100% { letter-spacing: 2px; }
-}
-
 .anchorLinks li a {
   display: inline-block;
   color: #333;
@@ -84,7 +78,7 @@ ul li{
 }
 
 .anchorLinks li a:hover {
-  animation: letterSpacing .5s forwards;
+  letter-spacing: 2px;
 }
 
 .logoname{
@@ -145,7 +139,6 @@ ul li{
 .hidden{
   display: none !important;
 }
-
 
 .secondsec .material-symbols-outlined{
   background: #fff;
@@ -208,7 +201,7 @@ ul li{
 
 .first{
     height: auto;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 20px;
@@ -716,4 +709,108 @@ body.show-emoji-picker em-emoji-picker {
 
 .chat-bot-thinking {
   display: none;
+}
+
+
+/* Hero section css  */
+/* Global Reset */
+  /* Hero Section */
+  .main-hero-section {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Text */
+  .text-container {
+  z-index: 99999;
+    text-align: center;
+    position: relative;
+}
+
+.main-hero-section-text {
+    font-size: 10vw;  /* Scales with screen size */
+    font-weight: 900;
+    color: rgb(0 0, 0);
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    display: inline-block;
+    border-radius: 50px;
+    text-transform: uppercase;
+    z-index: 99999;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.first-main-hero-section {
+  transform: rotate(-15deg);
+}
+.second-main-hero-section {
+  transform: rotate(15deg);
+  margin-top: 1vw;
+}
+.first-main-hero-section:hover {
+  transform: rotate(-12deg) scale(1.1);
+}
+
+.second-main-hero-section:hover {
+  transform: rotate(12deg) scale(1.1);
+}
+
+/* Decorative Elements */
+.decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Stars */
+.star {
+  z-index: 99999;
+    position: absolute;
+    width: 10vw; /* Adjusted for responsiveness */
+    height: auto;
+    animation: rotateStar 4s linear infinite;
+    transform-origin: center;
+}
+
+.star.blue {
+    width: 15vw;
+    top: 60vh;
+    left: 5vw;
+}
+
+.star.white {
+    top: 20vh;
+    right: 5vw;
+}
+
+/* Face */
+.face {
+  z-index: 99999;
+    position: absolute;
+    bottom: 8vh;
+    right: 9vw;
+    width: 10vw;
+    transition: all .5s ease-in-out;
+}
+.face:hover{
+  transform: rotate(-15deg);
+}
+
+/* Rotation Animation */
+@keyframes rotateStar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
