@@ -38,6 +38,12 @@ signUp.addEventListener('click', (event)=>{
     const email = document.getElementById('remail').value;
     const password = document.getElementById('rpassword').value;
     const name = document.getElementById('rname').value;
+    const passwordStrength = /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/;
+    
+    if (!passwordStrength.test(password.trim())) {
+        showMessage('Password must be at least 8 characters long, include an uppercase letter, a number, and a special character.', 'signUpMessage');
+        return;
+    }
 
     const auth = getAuth();
     const db = getFirestore();

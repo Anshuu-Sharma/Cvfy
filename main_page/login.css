@@ -7,8 +7,8 @@
 }
 
 body{
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-color: #efeff1;
+    background: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,16 +17,20 @@ body{
 }
 
 .container{
-    background-color: #fff;
+    background-color: #000;
     border-radius: 150px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 15px 15px rgba(0, 76, 255, 0.423);
     position: relative;
     overflow: hidden;
     width: 768px;
     max-width: 100%;
     min-height: 480px;
+    border: 2px solid #f2f2f2;
+
 
 }
+
+
 
 .container p{
     font-size: 15px;
@@ -50,7 +54,7 @@ body{
     padding: 10px 45px;
     color: #fff;
     border: 1px solid transparent;
-    background-color: #2e0782;
+    background-color: #1900FF;
     cursor: pointer;
     border-radius: 8px;
     font-weight: 700;
@@ -66,7 +70,7 @@ body{
 }
 
 .container form{
-    background-color: #fff;
+    background-color: #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,6 +89,10 @@ body{
     padding: 10px 16px;
     border-radius: 8px;
     outline: none;
+}
+
+.container h1{
+    color: #fff;
 }
 
 .sign-up, .sign-in{
@@ -135,10 +143,16 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    /* background-color: #fff; */
+    gap: 5px;
     top: 18%;
     right: 14%;
-    margin-bottom: 34px;
+    margin-bottom: 44px;
+
+}
+
+.messageDiv{
+    position: absolute;
+    top: -50%;
 
 }
 
@@ -166,6 +180,8 @@ body{
     
 }
 
+
+
 #google2{
     background-color: #eee;
     color: #757575;
@@ -178,7 +194,15 @@ body{
     margin-bottom: 34px;
 }
 
+
+
 #google span{
+    text-transform: initial;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#google2 span{
     text-transform: initial;
     font-size: 13px;
     font-weight: 500;
@@ -239,7 +263,8 @@ body{
 .toggle{
     background-color: #2e0782;
     height: 100%;
-    background: linear-gradient(to right, #724fbf, #2e0782);
+    background-color: #0a0064;
+    background-image: linear-gradient(180deg, #12058e 50%, #1900ff 100%);
     color: #fff;
     position: relative;
     left: -100%;
