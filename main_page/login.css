@@ -26,8 +26,6 @@ body{
     max-width: 100%;
     min-height: 480px;
     border: 2px solid #f2f2f2;
-
-
 }
 
 
@@ -311,3 +309,14 @@ body{
     opacity: 0;
     animation: fadeOut 7s forwards;
 }
+/* Elements */
+.el1{
+    position: fixed;
+    bottom: -10vh;
+    left: -5vw;
+  }
+  .el2{
+    position: fixed;
+    right: -5vw;
+    top: -6vh;
+  }
