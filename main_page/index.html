@@ -5,106 +5,123 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CVFY</title>
-  <link rel="stylesheet" href="style.css" >
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <script type="module" src="afterlogin.js"></script>
 </head>
 
 <body>
   <div class="chat-bot-body">
     <!-- Button to toggle chatbot -->
-   <button id="chat-bot-container-toggle-up" class="material-symbols-rounded">forum</button>
+    <button id="chat-bot-container-toggle-up" class="material-symbols-rounded">forum</button>
 
-   <!-- Main Chatbot body  -->
-   <div class="chat-bot-main-container">
-       <!-- header container -->
-       <div class="chat-bot-header">
-           <div class="chat-bot-left-header">
-               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
-                   <path
-                       d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z">
-                   </path>
-               </svg>
-               <p>
-                   Chatty
-               </p>
-           </div>
-           <div class="chat-bot-right-header">
-               <button class="material-symbols-rounded" id="chat-bot-container-toggle-down">keyboard_arrow_down</button>
-           </div>
-       </div>
+    <!-- Main Chatbot body  -->
+    <div class="chat-bot-main-container">
+      <!-- header container -->
+      <div class="chat-bot-header">
+        <div class="chat-bot-left-header">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+            <path
+              d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z">
+            </path>
+          </svg>
+          <p>
+            Chatty
+          </p>
+        </div>
+        <div class="chat-bot-right-header">
+          <button class="material-symbols-rounded" id="chat-bot-container-toggle-down">keyboard_arrow_down</button>
+        </div>
+      </div>
 
-       <!-- Chat area -->
-       <div class="chat-bot-chat-body">
-           <!-- Bot message div -->
-           <div class="chat-bot-message chat-bot-bot-message">
-               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
-                   <path
-                       d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z">
-                   </path>
-               </svg>
-               <div class="chat-bot-message-text">
-                   Hey there! <br /> How can I help you today?
-               </div>
-            </div>
-       </div>
-
-       <!-- Attachment confirmation div  -->
-       <div class="chat-bot-attachment-confirmed">File added successfully!</div>
-
-       <!-- Message input box -->
-       <div class="chat-bot-footer-container">
-           <div class="chat-bot-message-box">
-               <input type="text" placeholder="Message...." id="chat-bot-message-area" required>
-               <div class="chat-bot-attachments">
-                   <button id="chat-bot-emoji-picker" class="material-symbols-rounded">mood</button>
-                   <div class="chat-bot-file-upload-wrapper">
-                       <input type="file" accept="images/*" id="chat-bot-file-input" hidden>
-                       <button class="material-symbols-rounded" id="chat-bot-file-input-btn">attach_file</button>
-                       <button class="material-symbols-rounded" id="chat-bot-file-cancel-btn">cancel</button>
-                   </div>
-                   <button class="material-symbols-rounded" id="chat-bot-send">send</button>
-               </div>
-           </div>
-       </div>
-
-   </div>
-  </div>
-  <div id="main_container">
-    <div id="header">
-      <div id="header-container">
-        <div class="leftHeader">
-          <div class="logoBox">
-            <a href="#"><img src="bggg.png" alt="logoImg" width="50px" height="50px" /></a>
-            <!-- <a href="#"><h1>ResumeWiz</h1></a> -->
-          </div>
-          <div class="anchorLinks">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Resume</a></li>
-              <li><a href="#">Cover Letter</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
+      <!-- Chat area -->
+      <div class="chat-bot-chat-body">
+        <!-- Bot message div -->
+        <div class="chat-bot-message chat-bot-bot-message">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+            <path
+              d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9zM351.7 448.2c0-29.5 23.9-53.5 53.5-53.5s53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5-53.5-23.9-53.5-53.5zm157.9 267.1c-67.8 0-123.8-47.5-132.3-109h264.6c-8.6 61.5-64.5 109-132.3 109zm110-213.7c-29.5 0-53.5-23.9-53.5-53.5s23.9-53.5 53.5-53.5 53.5 23.9 53.5 53.5-23.9 53.5-53.5 53.5zM867.2 644.5V453.1h26.5c19.4 0 35.1 15.7 35.1 35.1v121.1c0 19.4-15.7 35.1-35.1 35.1h-26.5zM95.2 609.4V488.2c0-19.4 15.7-35.1 35.1-35.1h26.5v191.3h-26.5c-19.4 0-35.1-15.7-35.1-35.1zM561.5 149.6c0 23.4-15.6 43.3-36.9 49.7v44.9h-30v-44.9c-21.4-6.5-36.9-26.3-36.9-49.7 0-28.6 23.3-51.9 51.9-51.9s51.9 23.3 51.9 51.9z">
+            </path>
+          </svg>
+          <div class="chat-bot-message-text">
+            Hey there! <br /> How can I help you today?
           </div>
         </div>
-        <div class="rightHeader">
-          <div class="firstsec">
-            <a href="login.html"><button class="details">Sign In</button></a>
-            <a href="login.html"><button class="details">Sign Up</button></a>
-          </div>
-          <div class="secondsec">
-            <button class="material-symbols-outlined">Account_Circle</button>
-            <div class="boxdrop">
-              <h4>Welcome!</h4>
-              <div><span id="loggedUserName"></span></div>
-              <button id="logout">Logout</button>
+      </div>
+
+      <!-- Attachment confirmation div  -->
+      <div class="chat-bot-attachment-confirmed">File added successfully!</div>
+
+      <!-- Message input box -->
+      <div class="chat-bot-footer-container">
+        <div class="chat-bot-message-box">
+          <input type="text" placeholder="Message...." id="chat-bot-message-area" required>
+          <div class="chat-bot-attachments">
+            <button id="chat-bot-emoji-picker" class="material-symbols-rounded">mood</button>
+            <div class="chat-bot-file-upload-wrapper">
+              <input type="file" accept="images/*" id="chat-bot-file-input" hidden>
+              <button class="material-symbols-rounded" id="chat-bot-file-input-btn">attach_file</button>
+              <button class="material-symbols-rounded" id="chat-bot-file-cancel-btn">cancel</button>
             </div>
+            <button class="material-symbols-rounded" id="chat-bot-send">send</button>
           </div>
-         
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="main_container">
+    <div id="header-container">
+      <div class="logoBox">
+        <!-- <a href="#"><img src="bggg.png" alt="logoImg"/></a> -->
+         <div class="logoname">cvfy</div>
+      </div>
+      <div class="leftHeader">
+        <div class="anchorLinks">
+          <ul>
+            <li><a href="/main_page/index.html">Home</a></li>
+            <li><a href="/ats_score_checker/ats_score.html">ATS</a></li>
+            <li><a href="/cover_letter_generatorr/coverletter.html">Cover Letter</a></li>
+            <li><a href="/missing_skills/missing_skills.html">Missing Skills</a></li>
+            <li><a href="#">About us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rightHeader">
+        <div class="firstsec">
+          <a href="login.html"><button class="details">Sign In</button></a>
+          <a href="login.html"><button class="details">Sign Up</button></a>
+        </div>
+        <div class="secondsec">
+          <button class="material-symbols-outlined">Account_Circle</button>
+          <div class="boxdrop">
+            <h4>Welcome!</h4>
+            <div><span id="loggedUserName"></span></div>
+            <button id="logout">Logout</button>
+          </div>
         </div>
       </div>
     </div>
+
+
+    <!-- Hero section -->
+    <section class="main-hero-section">
+      <div class="text-container">
+          <div class="main-hero-section-text first-main-hero-section">CVfy</div>
+          <div class="main-hero-section-text second-main-hero-section">Simplify </div>
+      </div>
+      <div class="decorations">
+          
+          <img src="star2.svg" alt="Blue Star" class="star blue">
+          <img src="star1.svg" alt="White Star" class="star white">
+          <img src="face.svg" alt="Face" class="face">
+      </div>
+  </section>
+
+
+
 
     <div class="first">
       <div class="content">
@@ -162,7 +179,7 @@
 
     <div class="seperation"></div>
 
-    
+
 
     <section>
       <div class="sec-img">
@@ -199,67 +216,83 @@
     <div class="seperation"></div>
 
     <!-- FAQ SECTION -->
-     <section  class="FAQSEC">
-      <legend id="legendbox" > 
+    <section class="FAQSEC">
+      <legend id="legendbox">
         <h2 id="FAQHEADER " style="font-size: 2rem; color: blue;">Frequently asked question</h2>
-        
-        <div class="FAQ "> 
+
+        <div class="FAQ ">
           <div class="firstquestion">
             <details>
               <summary>Should my resume be in PDF or Word format?</summary>
               <p>It’s generally better to use a PDF for your CV unless specifically instructed otherwise. Here’s why:
-    
-                Preserves Formatting: PDFs ensure that the layout and design of your CV remain consistent, regardless of the device or software used to open it.
-                Professional Appearance: PDF files look more polished and professional compared to Word documents, which may open differently depending on software versions.
+
+                Preserves Formatting: PDFs ensure that the layout and design of your CV remain consistent, regardless of
+                the device or software used to open it.
+                Professional Appearance: PDF files look more polished and professional compared to Word documents, which
+                may open differently depending on software versions.
                 Compatibility: PDFs are universally compatible with almost all systems.
-                Editable Situations: If the employer requests an editable format (like Word), provide that instead. Always follow the specific instructions in the job listing.</p>
+                Editable Situations: If the employer requests an editable format (like Word), provide that instead.
+                Always follow the specific instructions in the job listing.</p>
             </details>
           </div>
-          
+
           <div class="secondquestion">
             <details>
               <summary>Should I send a cover letter with my resume?</summary>
-              <p>It’s generally a good idea to send a cover letter along with your CV unless the job listing specifically states it’s not required. Here’s why:
-    
-                Showcases Your Interest: A cover letter gives you the opportunity to explain why you're interested in the role and how you align with the company's values or goals.
-                Highlights Key Skills: You can elaborate on achievements or experiences that are particularly relevant to the position, which might not be as detailed in your CV.
-                Personal Touch: It adds a personal element, showing effort and enthusiasm, which can make a positive impression on recruiters.
+              <p>It’s generally a good idea to send a cover letter along with your CV unless the job listing
+                specifically states it’s not required. Here’s why:
+
+                Showcases Your Interest: A cover letter gives you the opportunity to explain why you're interested in
+                the role and how you align with the company's values or goals.
+                Highlights Key Skills: You can elaborate on achievements or experiences that are particularly relevant
+                to the position, which might not be as detailed in your CV.
+                Personal Touch: It adds a personal element, showing effort and enthusiasm, which can make a positive
+                impression on recruiters.
                 When Not to Send a Cover Letter:
-                If the job listing explicitly says "No cover letter required," follow those instructions. Otherwise, err on the side of sending one.
-                
-                Tip: Tailor your cover letter to the specific job and company to make it impactful. Keep it concise and professional!</p>
+                If the job listing explicitly says "No cover letter required," follow those instructions. Otherwise, err
+                on the side of sending one.
+
+                Tip: Tailor your cover letter to the specific job and company to make it impactful. Keep it concise and
+                professional!</p>
             </details>
           </div>
-         
+
           <div class="thirdquestion">
             <details>
               <summary>Why do I have to make a different resume for every job application?</summary>
               <p>### Recommended FAQ Answer:
-    
-                You should tailor your resume for every job application because it increases your chances of standing out to employers. Here's why:  
-                
-                1. **Relevance:** Different jobs require different skills and experiences. Customizing your resume allows you to highlight the qualifications most relevant to the specific role.  
-                2. **Keywords:** Many companies use Applicant Tracking Systems (ATS) to screen resumes. By aligning your resume with the job description, you ensure it contains the keywords needed to pass the initial screening.  
-                3. **Demonstrates Effort:** A tailored resume shows the employer you’ve taken the time to understand their needs and explain why you’re the right fit for the role.  
-                4. **Competitive Edge:** Generic resumes can get overlooked, especially if other candidates have tailored theirs to the job.  
-                
-                **Tip:** You don’t have to start from scratch each time—have a master resume and adapt it for each job by tweaking sections like the objective, skills, and work experience to match the role.</p>
+
+                You should tailor your resume for every job application because it increases your chances of standing
+                out to employers. Here's why:
+
+                1. **Relevance:** Different jobs require different skills and experiences. Customizing your resume
+                allows you to highlight the qualifications most relevant to the specific role.
+                2. **Keywords:** Many companies use Applicant Tracking Systems (ATS) to screen resumes. By aligning your
+                resume with the job description, you ensure it contains the keywords needed to pass the initial
+                screening.
+                3. **Demonstrates Effort:** A tailored resume shows the employer you’ve taken the time to understand
+                their needs and explain why you’re the right fit for the role.
+                4. **Competitive Edge:** Generic resumes can get overlooked, especially if other candidates have
+                tailored theirs to the job.
+
+                **Tip:** You don’t have to start from scratch each time—have a master resume and adapt it for each job
+                by tweaking sections like the objective, skills, and work experience to match the role.</p>
             </details>
           </div>
-          
+
           <div class="fourthquestion">
             <details>
               <summary>What is the ideal length for a CV?</summary>
               <p>The ideal length for a CV depends on your experience:
-    
+
                 For most roles, a one-page CV works well, especially for students or professionals with less experience.
                 If you have extensive experience or multiple relevant achievements, a two-page CV is acceptable.</p>
             </details>
           </div>
         </div>
-       </section>
-      </legend>
-     
+    </section>
+    </legend>
+
 
     <footer>
       <div class="footer">
@@ -316,4 +349,4 @@
   <script src="/chat_bot/script.js"></script>
 </body>
 
-</html> 
+</html>
