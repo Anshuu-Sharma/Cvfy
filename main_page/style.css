@@ -888,9 +888,9 @@ body.show-emoji-picker em-emoji-picker {
   gap: 20px;
   position: relative;
   padding: 20px;
-  border: 2px solid rgba(0, 255, 255, 0.2);
+  border: 2px solid rgba(204, 206, 206, 0.8);
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(41, 34, 53, 0.5);
+  box-shadow: 0 0 15px rgba(204, 206, 206, 0.8);
 }
 
 .creator {
@@ -899,12 +899,12 @@ body.show-emoji-picker em-emoji-picker {
   background: #111;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
 }
 
 .creator:hover {
-  box-shadow: 0 0 20px rgba(43, 67, 67, 0.8);
+  box-shadow: 0 0 20px rgba(204, 206, 206, 0.8);
 }
 
 .creator-image {
@@ -925,6 +925,7 @@ body.show-emoji-picker em-emoji-picker {
   gap: 15px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.8);
+  filter: grayscale(1);
   border-radius: 10px;
   position: absolute;
   bottom: 15px;
@@ -1010,7 +1011,7 @@ details:not([open]) summary ~ * {
 details summary {
   font-size: 16px;
   font-weight: bold;
-  background-color: #007BFF;
+  background-color: black;
   color: #fff;
   padding: 10px;
   border-radius: 5px;
@@ -1018,7 +1019,7 @@ details summary {
   user-select: none;
 }
 details summary:hover {
-  background-color: #0056b3;
+  background-color: #686c71;
 }
 .faq-p {
   background-color: #f1f1f1;
