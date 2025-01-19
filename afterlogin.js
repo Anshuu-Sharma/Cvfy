@@ -20,27 +20,39 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 
-const firstsec = document.querySelector('.firstsec');
-const secondsec = document.querySelector('.secondsec');
+const firstsec = document.querySelectorAll('.firstsec');
+const secondsec = document.querySelectorAll('.secondsec');
+const boxDrop = document.querySelectorAll('.boxdrop');
 const logoutbutton = document.getElementById('logout');
 const google_login = document.getElementById('google');
 const google_signup = document.getElementById('google2')
+
+
+const fun1 = (prop) =>{
+  firstsec.forEach(element => {
+  element.style.display = prop; 
+});
+}
+const fun2 = (prop) =>{
+  secondsec.forEach(element => {
+    element.style.display = prop;
+  });
+}
+
 
 
 function updateUserProfile(user) {
   if (user) {
     const displayName = user.displayName || "User";
     document.getElementById('loggedUserName').innerText = displayName;
-    firstsec.style.display = 'none';
-    secondsec.style.display = 'flex';
+    
+    fun1("none");
+    fun2("flex");
   } else {
-    firstsec.style.display = 'flex';
-    secondsec.style.display = 'none';
+    fun1("flex");
+    fun2("none");
   }
 }
-
-
-
 
 
 onAuthStateChanged(auth, async (user) => {
@@ -68,18 +80,18 @@ onAuthStateChanged(auth, async (user) => {
           if (docSnap.exists()) {
               const userData = docSnap.data();
               document.getElementById('loggedUserName').innerText = userData.name;
-              firstsec.style.display = 'none';
-              secondsec.style.display = 'flex';
+              fun1("none");
+              fun2("flex");
           }
       } catch (error) {
           console.error("Error handling user data:", error);
-          firstsec.style.display = 'flex';
-          secondsec.style.display = 'none';
+          fun1("flex");
+          fun2("none");
       }
   } else {
       console.log("No user signed in.");
-      firstsec.style.display = 'flex';
-      secondsec.style.display = 'none';
+      fun1("flex");
+      fun2("none");
   }
 });
 
@@ -96,8 +108,8 @@ onAuthStateChanged(auth, async (user) => {
             .then(() => {
           
               if (firstsec && secondsec) {
-                firstsec.style.display = 'flex'
-                secondsec.style.display = 'none';
+               fun1("flex");
+                fun2("none");
               } else {
                 console.error('Element with class "secondsec" not found.');
               }
@@ -116,19 +128,20 @@ onAuthStateChanged(auth, async (user) => {
 
   const account = document.querySelector(".material-symbols-outlined");
   account.addEventListener('click', () => {
-    const boxdrop = document.querySelector('.boxdrop'); 
-    if (boxdrop) {
+   boxDrop.forEach(element => {
+    if (element) {
 
-      if (boxdrop.style.display === 'none' || boxdrop.style.display === '') {
-        boxdrop.style.display = 'flex'; 
-        boxdrop.style.justifyContent = 'center'
-        boxdrop.style.alignItems = 'center'
+      if (element.style.display === 'none' || element.style.display === '') {
+        element.style.display = 'flex'; 
+        element.style.justifyContent = 'center'
+        element.style.alignItems = 'center'
       } else {
-        boxdrop.style.display = 'none';
+        element.style.display = 'none';
       }
     } else {
       console.error('Dropdown element not found.');
     }
+   })
   });
 
 

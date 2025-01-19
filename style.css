@@ -1405,7 +1405,7 @@ details summary:hover {
   
   cursor: pointer;
   
-  opacity: 0; /* hide this */
+  opacity: 0; 
   z-index: 2; /* and place it over the hamburger */
   
   -webkit-touch-callout: none;
@@ -1487,7 +1487,7 @@ details summary:hover {
   padding: 50px;
   padding-top: 125px;
   box-sizing: border-box;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
