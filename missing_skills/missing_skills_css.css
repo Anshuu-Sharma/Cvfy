@@ -205,12 +205,6 @@ header {
     transform-origin: center;
 }
 
-.star.blue {
-    width: 15vw;
-    bottom: 10vh;
-    right: 3vw;
-}
-
 .star.white {
   z-index: 99;
   width: 200px;
@@ -292,7 +286,7 @@ a{
   z-index: 99999;
   position: absolute;
   top:20vh;
-  left: 100px;
+  left: 5vw;
   /* right: 10px; */
   justify-content: center;
   align-items: center;
@@ -306,6 +300,7 @@ a{
 }
 .roadmap{
   position: relative;
+  margin: 37px 0;
 }
 #roadmapClose{
   z-index: 9999999999;
@@ -365,11 +360,258 @@ a{
 /* Elements */
 .el1{
   position: fixed;
-  bottom: -10vh;
-  left: -5vw;
+  bottom: -16vh;
+  left: -8vw;
 }
 .el2{
   position: fixed;
-  right: -5vw;
-  top: -6vh;
+  right: -8vw;
+  border-radius: 100%;
+  top: -11vh;
+}
+
+
+
+
+@media (max-width: 1152px){
+  header {
+    font-size: 40px;
+    p {
+      font-size: 20px;
+    }
+  }
+  
+  .skills-matcher-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    max-width: 700px;
+    gap: 0.5rem;
+    padding: 15px;
+  }
+  
+  .ats-score-hero {
+    font-size: 30px;
+    margin: 20px;
+    line-height: 4rem;
+    div {
+      font-size: 20px;
+    }
+  }
+  
+  
+  .card {
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  
+  .el1, .el2, .star.white{
+    display: none;
+  }
+  
+  .drop-zone p,
+  .drop-zone .small {
+    font-size: 0.75rem;
+  }
+  
+  button {
+    font-size: 0.75rem;
+  }
+  
+  .skills-matcher {
+    font-size: 25px;
+  }
+
+  #result{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  #result h2{
+    font-size: 6rem;
+    margin-bottom: 25px;
+  }
+
+  #missingSkill{
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .roadmap-container{
+    width: 80vw;
+    top: 20vh;
+    left: 10vw;
+    padding: 15px;
+  }
+  #roadmapBtn {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    margin-top: 10px;
+  }
+
+  .skill {
+    width: 220px;
+    font-size: 1.4rem;
+    padding: 10px 12px;
+  }
+
+  .connector {
+    height: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  header {
+    font-size: 25px;
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .skills-matcher-container {
+    width: 95%;
+    gap: 0.5rem;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .ats-score-hero {
+    font-size: 30px;
+    line-height: 3rem;
+    div {
+      font-size: 20px;
+    }
+  }
+
+  .card {
+    padding: 0.5rem;
+  }
+
+  label,
+  input[type="text"] {
+    font-size: 0.8rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  button {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  #result h2 {
+    font-size: 5rem;
+  }
+
+  .skills-matcher {
+    font-size: 20px;
+    padding: 0.5rem;
+  }
+
+  .roadmap-container {
+    width: 90vw;
+    top: 25vh;
+    left: 5vw;
+    padding: 10px;
+  }
+
+  .skill {
+    width: 200px;
+    font-size: 1.2rem;
+    padding: 8px 10px;
+  }
+
+  .connector {
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 20px;
+    p {
+      font-size: 10px;
+    }
+  }
+
+  .skills-matcher-container {
+    padding: 10px;
+    gap: 0.5rem;
+    margin: 0.5rem auto;
+    justify-content: center;
+    height: fit-content;
+
+  }
+
+  .ats-score-hero {
+    font-size: 20px;
+    line-height: 2rem;
+    div {
+      font-size: 16px;
+    }
+  }
+
+  .card {
+    padding: 0.5rem;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  label {
+    font-size: 0.7rem;
+  }
+
+  input[type="text"] {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+
+  .drop-zone {
+    padding: 1rem;
+  }
+
+  button {
+    font-size: 0.65rem;
+    padding: 0.4rem;
+  }
+
+  #result h2 {
+    font-size: 3rem;
+  }
+
+  .skills-matcher {
+    font-size: 16px;
+  }
+
+  .roadmap-container {
+    width: 100vw;
+    top: 30vh;
+    left: 0;
+    padding: 5px;
+  }
+
+  .roadmap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 100%;
+    font-size: 1rem;
+    padding: 6px 8px;
+    margin: 5px 0;
+  }
+
+  .connector {
+    height: 10px;
+  }
+
 }
