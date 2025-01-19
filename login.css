@@ -23,7 +23,6 @@ body{
     position: relative;
     overflow: hidden;
     width: 768px;
-    max-width: 100%;
     min-height: 480px;
     border: 2px solid #f2f2f2;
 }
@@ -142,9 +141,8 @@ body{
     align-items: center;
     position: absolute;
     /* background-color: #fff; */
-    top: 18%;
-    right: 12%;
-    margin-bottom: 34px;
+    margin: 40px auto;
+    width: 100%;
 
 }
 
@@ -321,4 +319,104 @@ body{
     position: fixed;
     right: -5vw;
     top: -6vh;
+  }
+
+  @media (max-width: 1152px){
+    .container{
+        width: 70vw;
+    }
+
+
+    .container button{
+        font-size: 13px;
+        padding: 12px 5px;
+    }
+
+    .lower{
+        top: 20%;
+        left: 14%;
+    }
+  }
+
+  @media (max-width: 768px){
+    .container{
+        width: 80vw;
+    }
+
+    .el1, .el2{
+        display: none;
+    }
+
+    .container h1{
+        font-size: 2rem;
+    }
+
+    .container p {
+        font-size: 14px;
+        margin: 15px 0;
+    }
+
+    .container input {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .container button {
+        padding: 15px 35px;
+        font-size: 12px;
+    }
+
+    .lower{
+        top: 23%;
+        left: 12%;
+    }
+
+    #google span, #google2 span{
+        display: none;
+    }
+
+    #google, #google2{
+        padding: 5px;
+    }
+
+    .upper{
+        margin-bottom: 15px;
+    }
+    .upper h1{
+        margin: 5px 30px;
+    }
+
+  }
+
+
+  @media (max-width: 480px){
+    .container{
+        width: 90vw;
+    }
+
+    .container input {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+    .container button {
+        padding: 6px 30px;
+        font-size: 10px;
+    }
+
+    #google span, #google2 span{
+        display: none;
+    }
+
+    #google, #google2{
+        padding: 5px;
+    }
+
+    .upper{
+        margin-bottom: 15px;
+    }
+    .upper h1{
+        margin: 5px 30px;
+    }
+
   }
