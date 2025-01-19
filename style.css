@@ -32,9 +32,10 @@ ul li{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     position: relative;
     width: 100vw;
+    margin: 0 auto;
   }
 #header-container{
   background-color: rgb(0, 0, 0);
@@ -504,7 +505,7 @@ footer {
     animation-play-state: paused;
   }
   .FAQ{
-    width: 80%;
+    /* width: 80%; */
     height: auto;
     font-size: 1.1rem;
     gap: 10px;
@@ -526,11 +527,11 @@ footer {
   z-index: 999999;
   position: fixed;
   width: 70px;
-  bottom: 20px;
+  bottom: 2vh;
   padding: 20px;
   background-color: #ffffff;
-  border-radius: 70px;
-  right: 25px;
+  border-radius: 70px; 
+  right: 2%;   
   cursor: pointer;
   border: none;
 }
@@ -920,8 +921,10 @@ body.show-emoji-picker em-emoji-picker {
     }
 }
 #developersec {
+  margin: 0 auto;
+  width: fit-content;
   padding: 20px;
-  background: #1e1e1e;
+  background: #000000;
   color: #fff;
 }
 
@@ -932,7 +935,7 @@ body.show-emoji-picker em-emoji-picker {
   align-items: center;
   gap: 10px;
   margin-bottom: 2rem;
-  font-size: 3rem;
+  font-size: calc(1rem + 2vw); 
   text-transform: uppercase;
   overflow: hidden;
   position: relative;
@@ -1116,7 +1119,7 @@ body.show-emoji-picker em-emoji-picker {
 /* FAQ SECTION */
 .faq-container {
   display: flex;
-  width: 1000px;
+  /* width: 1000px; */
   max-width: 1200px;
   margin: auto;
   margin-bottom: 7rem;
@@ -1206,10 +1209,6 @@ details summary:hover {
     width: 90%; /* Adjust width for smaller screens */
   }
 
-  .faq-image {
-    display: none; /* Hide the image on small screens */
-  }
-
   .faq-content {
     padding: 15px;
   }
@@ -1250,20 +1249,21 @@ details summary:hover {
 
 /* First section css */
 .aboutCvfy{
-  padding: 0px 100px;
+  /* margin: 2px; */
+  padding: 0px 20px;
   background-color: #000000;
   display: flex;
   flex-direction: column;
   gap: 10rem;
   align-items: center;
   position: relative;
-  height: 100%;
+  /* height: 100%; */
   overflow: hidden;
 }
 .about{
   display: flex;
   gap:7rem;
-  width: 100%;
+  /* width: 100%; */
   
 }
 .aboutCvfyLeft{
@@ -1271,7 +1271,7 @@ details summary:hover {
   transform: translateY(70px);
   transition: opacity 0.2s ease-in, transform 0.2s ease-in;
   color: white;
-  font-size: 200px;
+  font-size: calc(8rem + 2vw); 
   padding: 10px 30px;
   letter-spacing: 1rem;
   display: flex;
@@ -1283,10 +1283,11 @@ details summary:hover {
 .aboutCvfyRight{
   display: flex;
   flex-direction: column;
+  width: 100%;
 
 }
 .aboutCvfyRightHeading{
-  font-size: 100px;
+  font-size: calc(2rem + 2vw); 
   font-weight: 800;
   opacity: 0;
   transform: translateY(70px);
@@ -1381,7 +1382,7 @@ details summary:hover {
 }
 
 .svg-container {
-  width: 100%;
+  /* width:90vw; */
   position: relative;
 }
 
@@ -1608,7 +1609,7 @@ details summary:hover {
   right: 0px;  
   
   z-index: 1;
-  padding: 10px;
+  /* padding: 10px; */
   -webkit-user-select: none;
   user-select: none;
 }
@@ -1770,10 +1771,13 @@ details summary:hover {
   .secondsec{
     align-items: start;
   }
-
-}
-/* @media (min-width:1301px){
-  nav{
-    visibility: hidden;
+  .aboutCvfyLeft{
+    display: none;
   }
-} */
+}
+
+@media (max-width:995px){
+  .faq-image,.infoimg, .face, .chatbot{
+    display: none; /* Hide the image on small screens */
+  }
+}
