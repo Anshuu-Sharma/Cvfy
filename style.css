@@ -958,6 +958,9 @@ body.show-emoji-picker em-emoji-picker {
     height: 40px;
     border-radius: 40px;
 }
+
+
+/* FAQ SECTION */
 .faq-container {
   display: flex;
   width: 1000px;
@@ -968,46 +971,53 @@ body.show-emoji-picker em-emoji-picker {
   border-radius: 10px;
   border: 2px solid rgb(54, 54, 54);
   overflow: hidden;
-  
 }
+
 .faq-image {
   flex: 1;
   background-color: #000;
   display: flex;
-
   justify-content: center;
   align-items: center;
   padding: 20px;
 }
+
 .faq-image img {
   max-width: 100%;
   height: auto;
   border-radius: 15px;
 }
+
 .faq-content {
   flex: 1;
   padding: 30px;
 }
+
 .faq-header {
   font-size: 28px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 10px;
 }
+
 .faq-subheader {
   font-size: 16px;
   color: #fff;
   margin-bottom: 20px;
 }
+
 details {
   margin-bottom: 15px;
 }
+
 details[open] summary ~ * {
   display: block;
 }
+
 details:not([open]) summary ~ * {
   display: none;
 }
+
 details summary {
   font-size: 16px;
   font-weight: bold;
@@ -1018,16 +1028,12 @@ details summary {
   cursor: pointer;
   user-select: none;
 }
+
 details summary:hover {
   background-color: #686c71;
 }
-.faq-p {
-  background-color: #f1f1f1;
-  padding: 10px;
-  margin: 0;
-  border-radius: 5px;
-  color: #333;
-}
+
+.faq-p,
 .faq-ul {
   background-color: #f1f1f1;
   padding: 10px;
@@ -1035,9 +1041,58 @@ details summary:hover {
   border-radius: 5px;
   color: #333;
 }
-.frequentl-asked{
+
+.frequentl-asked {
   display: flex;
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .faq-container {
+    flex-direction: column; /* Stack content */
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .faq-image {
+    display: none; /* Hide the image on small screens */
+  }
+
+  .faq-content {
+    padding: 15px;
+  }
+
+  .faq-header {
+    font-size: 24px;
+    text-align: center; /* Center-align on smaller screens */
+  }
+
+  .faq-subheader {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-header {
+    font-size: 20px;
+  }
+
+  .faq-subheader {
+    font-size: 12px;
+  }
+
+  details summary {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .faq-p,
+  .faq-ul {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
 
 
 /* First section css */
