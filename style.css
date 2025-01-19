@@ -34,10 +34,11 @@ ul li{
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 100vw;
   }
 #header-container{
   background-color: rgb(0, 0, 0);
-  width: 100vw;
+  width: 100%;
   display: flex;
   gap: 45px;
   padding: 20px;
@@ -46,6 +47,7 @@ ul li{
   position: sticky;
   top: 0;
   z-index: 999999;
+  position: relative;
 }
 
 .logoBox {
@@ -715,7 +717,7 @@ body.show-emoji-picker em-emoji-picker {
     background: rgb(0, 0, 0);
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
   }
   
   /* Text */
@@ -1487,13 +1489,14 @@ details summary:hover {
 #menuToggle
 {
   display: none;
+  /* background-color: red; */
   /* You can also use relative/absolute here if you want to stay on the top */
-  position: fixed;
-  top: 40px;
-  right: 50px;
+  position: absolute;
+  top: 28px;    
+  right: 0px;  
   
   z-index: 1;
-  
+  padding: 10px;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -1598,9 +1601,10 @@ details summary:hover {
 {
   position: absolute;
   max-width: 400px;
-  right: -10rem;   
+  top: -0rem;  
+  left: -20em;       
   width: 100vw;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -1612,7 +1616,7 @@ details summary:hover {
   /* to stop flickering of text in safari */
   
   transform-origin: 0% 0%;
-  transform: translate(100%, 0);
+  transform: translate(0, -100%);
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
