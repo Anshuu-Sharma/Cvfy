@@ -1157,7 +1157,7 @@ details summary:hover {
 .aboutCvfyLeft{
   opacity: 0;
   transform: translateY(70px);
-  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
   color: white;
   font-size: 200px;
   padding: 10px 30px;
@@ -1178,18 +1178,18 @@ details summary:hover {
   font-weight: 800;
   opacity: 0;
   transform: translateY(70px);
-  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-  transition-delay: 0.3s;
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+  transition-delay: 0.2s;
 }
 .aboutCvfyRightInfo{
   opacity: 0;
   transform: translateY(70px);
-  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
   font-size: 25px;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  transition-delay: 0.5s;
+  transition-delay: 0.2s;
 }
 
 .aboutCvfyLeft.in-view, .aboutCvfyRightInfo.in-view, .aboutCvfyRightHeading.in-view{
