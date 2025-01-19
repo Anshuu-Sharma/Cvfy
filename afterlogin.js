@@ -23,7 +23,6 @@ const db = getFirestore(app);
 const firstsec = document.querySelectorAll('.firstsec');
 const secondsec = document.querySelectorAll('.secondsec');
 const boxDrop = document.querySelectorAll('.boxdrop');
-const logoutbutton = document.getElementById('logout');
 const google_login = document.getElementById('google');
 const google_signup = document.getElementById('google2')
 
@@ -44,7 +43,11 @@ const fun2 = (prop) =>{
 function updateUserProfile(user) {
   if (user) {
     const displayName = user.displayName || "User";
-    document.getElementById('loggedUserName').innerText = displayName;
+    
+    // Select all elements with the class 'loggedUserName' and update their innerText
+    document.querySelectorAll('.loggedUserName').forEach(element => {
+      element.innerText = displayName;
+    });
     
     fun1("none");
     fun2("flex");
@@ -79,7 +82,9 @@ onAuthStateChanged(auth, async (user) => {
 
           if (docSnap.exists()) {
               const userData = docSnap.data();
-              document.getElementById('loggedUserName').innerText = userData.name;
+              document.querySelectorAll('.loggedUserName').forEach(element => {
+                element.innerText = userData.name;
+            });
               fun1("none");
               fun2("flex");
           }
@@ -99,50 +104,48 @@ onAuthStateChanged(auth, async (user) => {
 
   document.addEventListener("DOMContentLoaded", () => {
 
-    if(logoutbutton){
-        logoutbutton.addEventListener('click', (event) => {
-          event.preventDefault()
-          localStorage.removeItem('loggedInUserId'); 
+    const logoutButtons = document.querySelectorAll('.logout'); // Select all logout buttons
+  
+    logoutButtons.forEach(logoutbutton => {
+      logoutbutton.addEventListener('click', (event) => {
+        event.preventDefault();
+        localStorage.removeItem('loggedInUserId'); 
+  
+        signOut(auth)
+          .then(() => {
+            if (firstsec && secondsec) {
+              fun1("flex");
+              fun2("none");
+            } else {
+              console.error('Element with class "secondsec" not found.');
+            }
+          })
+          .catch((error) => {
+            console.error('Error signing out:', error);
+          });
+      });
+    });
+  })
+  
 
-          signOut(auth)
-            .then(() => {
-          
-              if (firstsec && secondsec) {
-               fun1("flex");
-                fun2("none");
-              } else {
-                console.error('Element with class "secondsec" not found.');
-              }
 
-      
-            })
-            .catch((error) => {
-              console.error('Error signing out:', error);
+const accounts = document.querySelectorAll(".material-symbols-outlined");
 
-            });
-        });
-    }else{
-        console.error("Logout button not found")
-    }
-  });
-
-  const account = document.querySelector(".material-symbols-outlined");
+accounts.forEach((account, index) => {
   account.addEventListener('click', () => {
-   boxDrop.forEach(element => {
-    if (element) {
+    const box = boxDrop[index]; // Get the corresponding boxdrop
 
-      if (element.style.display === 'none' || element.style.display === '') {
-        element.style.display = 'flex'; 
-        element.style.justifyContent = 'center'
-        element.style.alignItems = 'center'
+    if (box) {
+      if (box.style.display === 'none' || box.style.display === '') {
+        box.style.display = 'flex'; 
+        box.style.justifyContent = 'center';
+        box.style.alignItems = 'center';
       } else {
-        element.style.display = 'none';
+        box.style.display = 'none';
       }
     } else {
       console.error('Dropdown element not found.');
     }
-   })
   });
-
-
+});
 
