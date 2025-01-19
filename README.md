@@ -84,20 +84,67 @@ Access the live application here: [CVFY](https://cvfy-pearl.vercel.app/)
 
 ## Project Structure
 ```plaintext
-├── index.html               # Main HTML file
-├── css/
-│   ├── style.css            # Stylesheet
-│   ├── responsive.css       # Responsive styles
-├── js/
-│   ├── main.js              # JavaScript file
-├── images/                  # Image assets
-├── cover_letter_generator/
-│   ├── coverletter.html     # Cover Letter page
-├── ats_score_checker/
-│   ├── ats_score.html       # ATS Checker page
-├── missing_skills/
-│   ├── missing_skills.html  # Missing Skills page
-├── README.md                # Documentation
+Directory structure:
+└── anshuu-sharma-cvfy/
+    ├── README.md
+    ├── afterlogin.js
+    ├── config.js
+    ├── firebaseauth.js
+    ├── index.html
+    ├── login.css
+    ├── login.html
+    ├── login.js
+    ├── scroll.js
+    ├── style.css
+    ├── assets/
+    │   └── images/
+    │       ├── random1.avif
+    │       └── random2.avif
+    ├── ats_score_checker/
+    │   ├── ats_css.css
+    │   ├── ats_score.html
+    │   ├── random1.avif
+    │   ├── random2.avif
+    │   └── js_ats_checker/
+    │       ├── aiUtils.js
+    │       ├── dragDrop.js
+    │       ├── main.js
+    │       ├── pdfUtils.js
+    │       └── ui.js
+    ├── chat_bot/
+    │   ├── script.js
+    │   └── htttps;/
+    │       └── cdn.jsdelivr.net/
+    │           └── npm/
+    │               └── emoji-mart@latest/
+    │                   └── dist/
+    │                       └── browser.js
+    ├── cover_letter_generatorr/
+    │   ├── cover.css
+    │   ├── coverletter.html
+    │   ├── random1.avif
+    │   ├── random2.avif
+    │   └── js_cover_letter/
+    │       ├── aiUtils.js
+    │       ├── dragDrop.js
+    │       ├── main.js
+    │       ├── pdfUtils.js
+    │       └── ui.js
+    ├── cv templates/
+    └── missing_skills/
+        ├── missing_skills.html
+        ├── missing_skills_css.css
+        ├── random1.avif
+        ├── random2.avif
+        └── missing_skills_js/
+            ├── aiUtils.js
+            ├── config.js
+            ├── dragDrop.js
+            ├── main.js
+            ├── pdfUtils.js
+            ├── roadmap.js
+            └── ui.js
+
 ```
 
 ---
