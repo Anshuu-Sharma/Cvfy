@@ -798,75 +798,60 @@ body.show-emoji-picker em-emoji-picker {
         transform: rotate(360deg);
     }
 }
-.Developers-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 7rem;
+#developersec {
+  padding: 20px;
+  background: #1e1e1e;
+  color: #fff;
 }
+
 
 .main-heading {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
+  margin-bottom: 2rem;
   font-size: 3rem;
-  color: rgb(95, 184, 190);
+  text-transform: uppercase;
   overflow: hidden;
+  position: relative;
 }
 
 .word {
-  opacity: 0;
+  display: inline-block;
   position: relative;
-  animation: fadeIn 1s forwards;
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
 }
 
 .word.meet {
-  animation: slideInLeft 1s forwards;
-}
-
-.word.developers {
-  animation: slideInRight 1s forwards;
+  animation-delay: 0.2s;
+  transform: translateX(100%);
 }
 
 .word.your {
-  animation-delay: 1s;
+  animation-delay: 0.4s;
+  transform: translateY(-100%);
 }
 
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
+.word.developers {
+  animation-delay: 0.6s;
+  transform: translateX(-100%);
+}
+
+@keyframes slideIn {
+  to {
     transform: translateX(0);
     opacity: 1;
   }
 }
 
-@keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Creator section  */
 .creator-section {
   display: flex;
   gap: 20px;
-  position: relative;
+  justify-content: center;
+  flex-wrap: wrap; 
   padding: 20px;
   border: 2px solid rgba(204, 206, 206, 0.8);
   border-radius: 15px;
@@ -881,6 +866,8 @@ body.show-emoji-picker em-emoji-picker {
   overflow: hidden;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
+  text-align: center;
+  padding-bottom: 20px; 
 }
 
 .creator:hover {
@@ -894,9 +881,9 @@ body.show-emoji-picker em-emoji-picker {
 }
 
 .creator-name {
-  text-align: center;
   font-size: 20px;
-  margin: 10px 0;
+  margin: 15px 0; 
+  color: #fff;
 }
 
 .social-icons {
@@ -907,11 +894,9 @@ body.show-emoji-picker em-emoji-picker {
   background: rgba(0, 0, 0, 0.8);
   filter: grayscale(1);
   border-radius: 10px;
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
+  margin: 0 auto;
+  width: 80%; 
+  margin-top: 15px; 
 }
 
 .social-icons a {
@@ -933,10 +918,77 @@ body.show-emoji-picker em-emoji-picker {
   background: rgba(0, 255, 255, 0.8);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 }
-.social-icons img{
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+  .creator-section {
+    flex-wrap: wrap; 
+    gap: 30px; 
+  }
+
+  .creator {
+    width: 45%; 
+  }
+
+  .creator-image {
+    height: 300px; 
+    object-fit: cover; 
+  }
+
+  .creator-name {
+    font-size: 18px;
+    margin-bottom: 10px; 
+  }
+
+  .social-icons {
+    flex-direction: row;
+    width: 90%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    width: 35px; 
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .creator-section {
+    gap: 20px; 
+  }
+
+  .creator {
+    width: 100%; 
+    padding-bottom: 20px; 
+  }
+
+  .creator-image {
+    height: 250px; 
+    object-fit: cover; 
+  }
+
+  .creator-name {
+    font-size: 16px; 
+    margin-bottom: 10px; 
+  }
+
+  .social-icons {
+    flex-direction: row; 
+    gap: 10px; 
+    margin-top: 10px; 
+  }
+
+  .social-icons a {
+    width: 30px; 
+    height: 30px;
+  }
 }
 
 
@@ -1186,8 +1238,10 @@ details summary:hover {
 
 .container {
   display: flex;
+  flex-wrap: wrap; /* Enables wrapping of the cards */
   gap: 20px;
   margin: 7rem 0;
+  justify-content: center; /* Centers the cards for smaller screens */
 }
 
 .card {
@@ -1231,8 +1285,6 @@ details summary:hover {
   text-align: center;
   transition: opacity 0.5s ease;
 }
-
-
 
 .description {
   position: absolute;
@@ -1321,7 +1373,7 @@ details summary:hover {
   margin-right: 8px;
 }
 
-.cta{
+.cta {
   background: white;
   padding: 10px 100px;
   border-radius: 50px;
@@ -1332,15 +1384,94 @@ details summary:hover {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 .cta a {
   text-decoration: none;
-  color:#000;
+  color: #000;
   font-size: 20px;
 }
+
 .card:hover .cta {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+
+/* For tablets and medium screens */
+@media (max-width: 992px) {
+  .card {
+      width: 45%; 
+  }
+
+  .card-title {
+      font-size: 22px; 
+  }
+
+  .capabilities {
+      font-size: 16px; 
+  }
+
+  .description {
+      font-size: 18px; 
+  }
+
+  .cta {
+      font-size: 22px;
+  }
+}
+
+/* For smaller tablets and large phones */
+@media (max-width: 768px) {
+  .card {
+      width: 100%; 
+      height: auto; 
+  }
+
+  .container {
+      gap: 30px; 
+  }
+
+  .card-title {
+      font-size: 24px; 
+  }
+
+  .capabilities {
+      font-size: 18px;
+  }
+
+  .description {
+      font-size: 20px;
+  }
+
+  .cta {
+      font-size: 24px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .card {
+      width: 100%; 
+  }
+
+  .card-title {
+      font-size: 26px; 
+  }
+
+  .capabilities {
+      font-size: 20px;
+  }
+
+  .description {
+      font-size: 22px;
+      padding: 15px;
+  }
+
+  .cta {
+      font-size: 26px;
+      padding: 10px 50px; 
+  }
 }
 
 /* burger menu css  */
