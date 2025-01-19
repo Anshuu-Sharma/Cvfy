@@ -366,14 +366,14 @@ a{
 /* Elements */
 .el1{
   position: fixed;
-  bottom: -10vh;
+  bottom: -18vh;
   left: -5vw;
 }
 .el2{
   position: fixed;
-  right: -8vw;
+  right: -5vw;
   border-radius: 100%;
-  top: -11vh;
+  top: -9vh;
 }
 
 

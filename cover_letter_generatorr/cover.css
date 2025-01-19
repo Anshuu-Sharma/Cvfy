@@ -29,23 +29,23 @@ body{
   /* Cover letter CSS */
   .cover-letter-container{
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     background-color: white;
     width: 80%;
-    max-height: 1500px;
+    max-height: auto;
     margin: 0px auto;
     border: 2px solid black;
     border-radius: 10px;
     padding: 20px;
     margin-top: 0;
-    width: 80%;
+    width: 80vw;
   }
   .ats-score-hero{
     color: rgb(0, 0, 0);
-    font-size: 50px;
+    font-size: calc(2rem + 2vw);
     margin: 50px;
     margin-left: 30px;
     line-height: 5rem;
@@ -57,7 +57,7 @@ body{
   }
   header{
     color: white;
-    font-size: 50px;
+    font-size: calc(2rem + 2vw); 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -189,23 +189,17 @@ header {
 
 /* Elements  */
 .star {
+  display: none;
     position: absolute;
     width: 10vw; /* Adjusted for responsiveness */
     height: auto;
     animation: rotateStar 4s linear infinite;
     transform-origin: center;
 }
-
-.star.blue {
-    width: 15vw;
-    bottom: 10vh;
-    right: 3vw;
-}
-
 .star.white {
   width: 200px;
-    top: 10vh;
-    right: 7vw;
+    top: 16vh;
+    right: 5vw;
 }
 @keyframes rotateStar {
   from {
@@ -230,6 +224,8 @@ header {
   font-size: 8rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  font-size: calc(4rem + 2vw);
+  text-align: center;
 }
 .cover-letter {
   display: flex;
@@ -248,12 +244,68 @@ header {
 
 /* Elements */
 .el1{
+  display: none;
   position: fixed;
-  top: -15vh;
-  left: -6vw;
+  top: -10vh;
+  left: -9vw;
 }
 .el2{
+  display: none;
   position: fixed;
-  right: -5vw;
   bottom: -6vh;
+  right: -5vw;
+}
+/* Media Queries */
+@media (max-width: 768px) { 
+  body {
+      padding: 20px; /* Reduced padding for smaller screens */
+  }
+  .cover-letter-container {
+      flex-direction: column; /* Stack items vertically on small screens */
+      width:90vw; /* Adjust width for small screens */
+  }
+  .ats-score-hero {
+    display: none;
+      font-size: calc(1.5rem + 3vw); /* Smaller font for smaller screens */
+  }
+  header {
+      font-size: calc(1.5rem + 3vw); /* Smaller font for smaller screens */
+  }
+}
+
+@media (min-width:768px) and (max-width:992px) { 
+  .cover-letter-container {
+      width:90vw; /* Adjust width for medium screens */
+  }
+}
+
+@media (min-width:992px) {
+  .cover-letter-container {
+      width:80vw; /* Adjust width for larger screens */
+  }
+}
+
+/* Additional Styles for Large Devices */
+@media (min-width:1152px) { 
+  .el1,.el2,.star{
+    display: block;
+  }
+  .cover-letter-container {
+    flex-direction: row;
+      max-height: none; /* Remove max-height for large devices */
+  }
+}
+
+@media (min-width:1152px) and (max-width: 1333px) {
+  .star.white {
+    width: 200px;
+      top: 18vh;   
+      right: 3vw;
+  }
+}
+
+@media (min-width: 1333px) and (max-width:  1570px) {
+  .el1{
+    left: -10vw;
+  }
 }
