@@ -29,22 +29,21 @@ body{
   /* Cover letter CSS */
   .ats-score-container{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     background-color: rgb(255, 255, 255);
-    max-height: auto;
+    max-height: 1500px;
     margin: 0px auto;
     border: 2px solid black;
     border-radius: 10px;
     padding: 20px;
     margin-top: 0;
-    width: 80vw;
+    width: 80%;
   }
   .ats-score-hero{
     color: rgb(0, 0, 0);
-    font-size: calc(2rem + 2vw);
+    font-size: 50px;
     margin: 50px;
     margin-left: 30px;
     line-height: 5rem;
@@ -58,8 +57,7 @@ body{
 
   header{
     color: white;
-    /* font-size: 50px; */
-    font-size: calc(2rem + 2vw); 
+    font-size: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,7 +74,7 @@ body{
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
-  margin: auto;
+  margin-right: 50px;
 }
 
 .form-group {
@@ -177,19 +175,16 @@ button:disabled {
 }
 
 #result h2 {
-  /* font-size: 8rem; */
-  font-size: calc(4rem + 2vw);
+  font-size: 8rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 .ats-score {
   display: flex;
   word-wrap: break-word;
   justify-content: center;
-  /* font-size:9rem; */
-  font-size: calc(5rem + 2vw);
+  font-size:9rem;
   max-width: 1250px;
   overflow-y: scroll;
   scrollbar-color: black;
@@ -242,17 +237,23 @@ color: white;
 
 /* Elements  */
 .star {
-  display: none;
     position: absolute;
     width: 10vw; /* Adjusted for responsiveness */
     height: auto;
     animation: rotateStar 4s linear infinite;
     transform-origin: center;
 }
+
+.star.blue {
+    width: 15vw;
+    top: 10vh;
+    right: 3vw;
+}
+
 .star.white {
   width: 200px;
-    top: 20vh;
-    left:5vw;
+    top: 15vh;
+    left: 7vw;
 }
 @keyframes rotateStar {
   from {
@@ -266,69 +267,11 @@ color: white;
 /* Elements */
 .el1{
   position: fixed;
-  top: -10vh;
-  left: -9vw;
-  display: none;
+  top: -15vh;
+  left: -6vw;
 }
 .el2{
   position: fixed;
   bottom: -6vh;
   right: -5vw;
-  display: none
-}
-
-/* Media Queries */
-@media (max-width: 768px) { 
-  body {
-      padding: 20px; /* Reduced padding for smaller screens */
-  }
-  .ats-score-container {
-      flex-direction: column; /* Stack items vertically on small screens */
-      width:90vw; /* Adjust width for small screens */
-  }
-  .ats-score-hero {
-    display: none;
-      font-size: calc(1.5rem + 3vw); /* Smaller font for smaller screens */
-  }
-  header {
-      font-size: calc(1.5rem + 3vw); /* Smaller font for smaller screens */
-  }
-}
-
-@media (min-width:768px) and (max-width:992px) { 
-  .ats-score-container {
-      width:90vw; /* Adjust width for medium screens */
-  }
-
-}
-
-@media (min-width:992px) {
-  .ats-score-container {
-      width:80vw; /* Adjust width for larger screens */
-  }
-}
-
-/* Additional Styles for Large Devices */
-@media (min-width:1152px) { 
-  .el1,.el2,.star{
-    display: block;
-  }
-  .ats-score-container {
-    flex-direction: row;
-      max-height: none; /* Remove max-height for large devices */
-  }
-}
-
-@media (min-width:1152px) and (max-width: 1333px) {
-  .star.white {
-    width: 200px;
-      top: 35vh;
-      left: 3vw;
-  }
-}
-
-@media (min-width: 1333px) and (max-width:  1570px) {
-  .el1{
-    left: -10vw;
-  }
 }

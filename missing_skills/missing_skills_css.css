@@ -205,6 +205,12 @@ header {
     transform-origin: center;
 }
 
+.star.blue {
+    width: 15vw;
+    bottom: 10vh;
+    right: 3vw;
+}
+
 .star.white {
   z-index: 99;
   width: 200px;
@@ -287,7 +293,7 @@ a{
   z-index: 99999;
   position: absolute;
   top:20vh;
-  left: 5vw;
+  left: 100px;
   /* right: 10px; */
   justify-content: center;
   align-items: center;
@@ -301,7 +307,6 @@ a{
 }
 .roadmap{
   position: relative;
-  margin: 37px 0;
 }
 #roadmapClose{
   z-index: 9999999999;
@@ -361,8 +366,8 @@ a{
 /* Elements */
 .el1{
   position: fixed;
-  bottom: -16vh;
-  left: -8vw;
+  bottom: -10vh;
+  left: -5vw;
 }
 .el2{
   position: fixed;
