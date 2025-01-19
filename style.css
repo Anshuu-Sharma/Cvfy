@@ -273,79 +273,191 @@ section .sec-content{
 
 
 /* Footer CSS */
-  footer{
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    width: 100%;
-    height: 250px;
-    background-color: black;
-    color: white;
-  }
-  .footer{
-    display: flex;
-    width: 100%;
-    gap: 25px;
-    justify-content: space-around;
-    margin-top:  30px;
+footer {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: 100%;
+  height: auto; 
+  background-color: black;
+  color: white;
+  font-family: 'Arial', sans-serif; 
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap; 
+  width: 100%;
+  gap: 25px;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center; 
+}
+
+.grid-cols {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  padding-bottom: 25px;
+}
+
+.left-footer {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.left-footer h3 {
+  font-family: 'oi', sans-serif; 
+  font-size: 37px;
+  font-weight: bolder;
+  font-weight: 100;
+  margin: 0;
+}
+
+.left-footer p {
+  font-size: 16px; 
+  margin: 5px 0;
+}
+
+.right-footer {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px; 
+}
+
+.footersub {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: white;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center; 
+  border-top: 2px solid #a3a3a3;
+  padding: 10px;
+}
+
+.policy a {
+  text-decoration: none;
+  color: grey;
+  font-size: 0.8rem; 
   
+}
+
+.policy {
+  font-size: 0.8rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 1px;
+}
+
+.copyright {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+/* Responsive Design */
+
+/* For tablets and medium screens */
+@media (max-width: 992px) {
+  .grid-cols {
+    width: 100%; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px; 
   }
 
-  .footer-content{
-    display: flex;
+  .right-footer {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem;
+  }
+
+  .footer-content {
+    align-items: center; 
+  }
+
+  .left-footer p {
+    font-size: 14px; 
+  }
+}
+
+/* For small screens and phones */
+@media (max-width: 768px) {
+  .grid-cols {
     flex-direction: column;
+    gap: 20px;
+  }
+
+  .right-footer {
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+  }
+
+  .footer-content {
+    align-items: center; 
+  }
+
+  .footersub {
+    flex-direction: column; 
+    gap: 10px;
+    text-align: center; 
+  }
+
+  .policy {
+    flex-direction: column; 
+    gap: 5px;
+  }
+
+  .left-footer p {
+    font-size: 12px; 
+    text-align: center;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .footer {
+    gap: 15px; 
+  }
+
+  .grid-cols {
+    gap: 15px;
+  }
+
+  .right-footer {
     gap: 10px;
   }
 
-  .grid-cols{
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 25px;
-  }
-  .left-footer{
-    display: flex;
-    align-items: center;
-  }
-  .right-footer{
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(3,1fr);
-  }
-  .footer-content a{
-    text-decoration: none;
-    color: white;
+  .footer-content {
+    font-size: 0.9rem; 
   }
 
-  .footersub{
-    display: flex;
-    color: white;
-    background-color: black;
-    justify-content: space-between;
-    border-top: 2px solid #a3a3a3;
-    padding: 10px;
+  .policy {
+    font-size: 0.7rem; 
   }
 
-  .policy a{
-    text-decoration: none;
-    color: grey;
+  .copyright {
+    font-size: 0.7rem;
   }
+}
 
-  .policy{
-    
-    font-size: 0.8rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    bottom: 1px;
-    
-  }
-  .copyright{
-    color: grey;
-    font-size: 0.8rem;
-  }
 
   .carousel-container {
     width: 100%;
