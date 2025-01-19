@@ -195,7 +195,14 @@ ul li {
   text-align: center;
 }
 
-#logout {
+.loggedUserName{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: #000 !important;
+}
+
+.logout {
   color: #2e0782;
   background-color: #fff;
   padding: 10px 15px;
@@ -205,7 +212,7 @@ ul li {
   border: none;
 }
 
-#logout:hover {
+.logout:hover {
   text-decoration: underline;
   color: #071e82;
 }
@@ -1527,4 +1534,14 @@ details summary:hover {
   #menuToggle{
     display: block;
   }
+
+  .boxdrop{
+    top: 450px;
+    gap: 22px;
+  }
+
+  .secondsec{
+    align-items: start;
+  }
+
 }
