@@ -183,4 +183,3 @@ Directory structure:
 - **Reason**: Customization improves ATS success rates and highlights relevant skills.
 
 Explore more on the [Live Site](https://cvfy-pearl.vercel.app/)! 🌟
-```
