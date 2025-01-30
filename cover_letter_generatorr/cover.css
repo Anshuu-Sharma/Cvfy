@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 :root {
   --primary: #2563eb;
   --primary-hover: #1d4ed8;
@@ -11,62 +15,413 @@
   --gray-700: #374151;
   --gray-900: #111827;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Rubik", serif;    
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", serif;
 }
 
-body{
-  padding: 50px;
+body {
+  /* padding: 50px; */
   width: 100vw;
   height: 100vh;
   background-color: #000000;
   background-attachment: fixed;
   color: rgb(0, 0, 0);
 }
-  /* Cover letter CSS */
-  .cover-letter-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    background-color: white;
-    width: 80%;
-    max-height: auto;
-    margin: 0px auto;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 0;
-    width: 80vw;
+
+/* Navbar */
+ul li {
+  list-style: none;
+}
+
+.rightHeader,
+.logoBox,
+.anchorLinks ul {
+  display: flex;
+  gap: 1rem;
+
+}
+
+
+#header-container {
+  background-color: rgb(0, 0, 0);
+  width: 100vw;
+  display: flex;
+  gap: 45px;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+
+  z-index: 999999;
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  /* margin-left: 20px; */
+}
+
+.logoBox a {
+  text-decoration: none;
+  color: black;
+}
+
+.anchorLinks ul {
+  gap: 3rem;
+}
+
+.anchorLinks ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-family: "Alumni Sans Pinstripe";
+}
+
+.anchorLinks li a {
+  display: inline-block;
+  color: #333;
+  transition: letter-spacing 0.5s ease-in-out;
+}
+
+.anchorLinks li a:hover {
+  letter-spacing: 2px;
+}
+
+.logoname a {
+  font-family: "Oi";
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+.rightHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.details {
+  width: 100px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: black;
+  border-radius: 9px;
+  transition: all .2s ease-in-out;
+}
+
+.details:hover {
+  background-color: #1900FF;
+  color: white;
+  cursor: pointer;
+}
+
+.firstsec {
+  display: flex;
+  gap: 15px;
+
+}
+
+.secondsec {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+
+
+.secondsec .material-symbols-outlined {
+  background: #fff;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+
+.boxdrop {
+  height: 150px;
+  width: 200px;
+  position: absolute;
+  top: 90px;
+  background-color: #000000;
+  /* border: 1px solid white; */
+  padding: 4px 10px;
+  backdrop-filter: blur(10px);
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.boxdrop h4 {
+  text-align: center;
+}
+
+.loggedUserName {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: #000 !important;
+}
+
+.logout {
+  color: #2e0782;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+}
+
+.logout:hover {
+  text-decoration: underline;
+  color: #071e82;
+}
+
+.details:hover {
+  background-color: #1900FF;
+  color: white;
+}
+
+/* menutoggle */
+
+#menuToggle {
+  display: none;
+  /* background-color: red; */
+  /* You can also use relative/absolute here if you want to stay on the top */
+  position: absolute;
+  top: 28px;
+  right: 0px;
+
+  z-index: 1;
+  /* padding: 10px; */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  right: -5px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  z-index: 2;
+  /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  max-width: 400px;
+  top: -0rem;
+  left: -20em;
+  width: 100vw;
+  /* max-height: 100vh; */
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  box-sizing: border-box;
+  /* overflow-y: auto; */
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(0, -100%);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menu li label {
+  cursor: pointer;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked~ul {
+  transform: none;
+}
+
+
+/* Media queries */
+@media (max-width:1301px) {
+
+  .leftHeader,
+  .rightHeader {
+    display: none;
   }
-  .ats-score-hero{
-    color: rgb(0, 0, 0);
-    font-size: calc(2rem + 2vw);
-    margin: 50px;
-    margin-left: 30px;
-    line-height: 5rem;
-    font-weight: 700;
-    div{
-      font-weight: 500;
-      font-size: 30px;
-    }
+
+  #menuToggle {
+    display: block;
   }
-  header{
-    color: white;
-    font-size: calc(2rem + 2vw); 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    p{
-      font-size: 25px;
-    }
-    
+
+  .boxdrop {
+    top: 450px;
+    gap: 22px;
   }
+
+  .secondsec {
+    align-items: start;
+  }
+
+  .aboutCvfyLeft {
+    display: none;
+  }
+}
+
+/* Cover letter CSS */
+.cover-letter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  width: 80%;
+  max-height: auto;
+  margin: 0px auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 0;
+  width: 80vw;
+}
+
+.ats-score-hero {
+  color: rgb(0, 0, 0);
+  font-size: calc(2rem + 2vw);
+  margin: 50px;
+  margin-left: 30px;
+  line-height: 5rem;
+  font-weight: 700;
+
+  div {
+    font-weight: 500;
+    font-size: 30px;
+  }
+}
+
+header {
+  color: white;
+  font-size: calc(2rem + 2vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 25px;
+  }
+
+}
+
 .card {
   background: white;
   border-radius: 0.5rem;
@@ -139,7 +494,7 @@ input[type="text"]:focus {
 button {
   width: 100%;
   padding: 0.5rem 1rem;
-  background-color:  rgb(25, 0, 255);
+  background-color: rgb(25, 0, 255);
   color: white;
   border: none;
   border-radius: 0.375rem;
@@ -162,6 +517,7 @@ button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
 .loader {
   width: 1rem;
   height: 1rem;
@@ -170,13 +526,25 @@ button:disabled {
   border-top-color: transparent;
   animation: spin 1s linear infinite;
 }
+
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
+
 @keyframes gradientText {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header {
@@ -190,23 +558,27 @@ header {
 /* Elements  */
 .star {
   display: none;
-    position: absolute;
-    width: 10vw; /* Adjusted for responsiveness */
-    height: auto;
-    animation: rotateStar 4s linear infinite;
-    transform-origin: center;
+  position: absolute;
+  width: 10vw;
+  /* Adjusted for responsiveness */
+  height: auto;
+  animation: rotateStar 4s linear infinite;
+  transform-origin: center;
 }
+
 .star.white {
   width: 200px;
-    top: 16vh;
-    right: 5vw;
+  top:20vh;
+  right: 5vw;
 }
+
 @keyframes rotateStar {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -227,11 +599,12 @@ header {
   font-size: calc(4rem + 2vw);
   text-align: center;
 }
+
 .cover-letter {
   display: flex;
   word-wrap: break-word;
   justify-content: center;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   max-width: 1250px;
   overflow-y: scroll;
   scrollbar-color: black;
@@ -240,72 +613,89 @@ header {
   border-radius: 0.5rem;
   color: rgb(0, 16, 234);
   white-space: pre-wrap;
-} 
+}
 
 /* Elements */
-.el1{
+.el1 {
   display: none;
   position: fixed;
-  top: -10vh;
-  left: -9vw;
+  top: 15vh;
+  left: -8vw;
 }
-.el2{
+
+.el2 {
   display: none;
   position: fixed;
-  bottom: -6vh;
+  bottom: -8vh;
   right: -5vw;
 }
+
 /* Media Queries */
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   body {
-      padding: 20px; /* Reduced padding for smaller screens */
+    padding: 20px;
+    /* Reduced padding for smaller screens */
   }
+
   .cover-letter-container {
-      flex-direction: column; /* Stack items vertically on small screens */
-      width:90vw; /* Adjust width for small screens */
+    flex-direction: column;
+    /* Stack items vertically on small screens */
+    width: 90vw;
+    /* Adjust width for small screens */
   }
+
   .ats-score-hero {
     display: none;
-      font-size: calc(1.5rem + 3vw); /* Smaller font for smaller screens */
+    font-size: calc(1.5rem + 3vw);
+    /* Smaller font for smaller screens */
   }
+
   header {
-      font-size: calc(1.5rem + 3vw); /* Smaller font for smaller screens */
+    font-size: calc(1.5rem + 3vw);
+    /* Smaller font for smaller screens */
   }
 }
 
-@media (min-width:768px) and (max-width:992px) { 
+@media (min-width:768px) and (max-width:992px) {
   .cover-letter-container {
-      width:90vw; /* Adjust width for medium screens */
+    width: 90vw;
+    /* Adjust width for medium screens */
   }
 }
 
 @media (min-width:992px) {
   .cover-letter-container {
-      width:80vw; /* Adjust width for larger screens */
+    width: 80vw;
+    /* Adjust width for larger screens */
   }
 }
 
 /* Additional Styles for Large Devices */
-@media (min-width:1152px) { 
-  .el1,.el2,.star{
+@media (min-width:1152px) {
+
+  .el1,
+  .el2,
+  .star {
     display: block;
   }
+
   .cover-letter-container {
     flex-direction: row;
-      max-height: none; /* Remove max-height for large devices */
+    max-height: none;
+    /* Remove max-height for large devices */
   }
 }
 
 @media (min-width:1152px) and (max-width: 1333px) {
   .star.white {
     width: 200px;
-      top: 18vh;   
-      right: 3vw;
+    top: 18vh;
+    right: 3vw;
   }
 }
 
-@media (min-width: 1333px) and (max-width:  1570px) {
-  .el1{
+@media (min-width: 1333px) and (max-width: 1570px) {
+  .el1 {
     left: -10vw;
   }
 }
