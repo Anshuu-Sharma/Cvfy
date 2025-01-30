@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     const funFacts = [
-        `"Sharma Ji ka Beta Approved" ✅ – CVFY makes sure your resume is so perfect that even Sharma Ji’s beta would be like, "Bhai, yeh toh next level hai!"`,
-        `"No More Uncle-Approved Resume Advice" 😤 – You don’t need uncles telling you, "Beta, resume mein 'hardworking' likho!" CVFY actually knows what works.`,
-        `"Ek Dum Tandoori Resume" 🔥 – Your old resume was like bland khichdi, but after CVFY, it’s a full spicy tandoori platter—crispy, flavorful, and recruiter-approved!`,
-        `"ATS = Aapka Toh Selection?" 🤔 – Think of the ATS as a tough sanskari rishta aunty, rejecting everyone. CVFY helps your resume pass all the sanskari filters.`,
-        `"Chatty = Career Ka Bollywood Sidekick" 🎬 – Chatty is like Circuit to your Munna Bhai, Tuffy to your Hum Aapke Hain Koun, guiding you through your job hunt with full desi dedication.`,
-        `"Indian Moms Would Love CVFY" 👩‍👦 – Imagine telling your mom, "Maa, CVFY ne bola ki mera resume perfect hai!"—She will finally stop saying "Beta, kuch aur try kar le na?" 😆`,
-        `"Garam Chai & Perfect Resume = Best Combo" ☕ – Just like how a cutting chai wakes you up, CVFY wakes up your dead resume and makes it job-ready!`,
-        `"CVFY is Like Jugaad for Your Career" 🛠️ – Why struggle to write resumes manually when CVFY is here? Jugaad lagao, cover letter banwao, aur aish karo!`,
-        `"Recruiters Be Like ‘Ye Ladka Toh ChatGPT Use Karta Hai’" 😎 – With CVFY fixing your resume, recruiters will wonder if you secretly have an AI-powered Buddha brain for job applications!`,
-        `"Missing Skills? Like Masala Missing in Biryani!" 🍛 – CVFY finds your missing skills faster than Indians find a lack of spice in foreign food and immediately suggests the perfect recipe to fix it!`
+        `"Sharma Ji ka Beta Who?" 🤡 – Your resume is so perfect even Sharma Ji’s beta is jealous!`,
+        `"Uncle’s Gyaan" 😤 – "Beta, thoda ‘hardworking’ likho!" Nah, we’re writing ‘Job-ready genius’ now.`,
+        `"Resume itna strong ho gaya, ab toh job ki jagah usse marriage proposal milna chahiye!" 💍`,
+        `"ATS = Aapka Toh Selection?" 🤔 – CVFY helps you pass the sanskari rishta aunty of job portals.`,
+        `"Chatty = Job Guru" 🎬 – "Tension mat le, jaise Munna Bhai ka Circuit, waise Chatty apna career sidekick!"`,
+        `"CVFY: Because every Indian mom deserves to hear, 'Beta, tumhara resume perfect hai!' instead of 'Aur kuch try kar lo?'" 😄`,
+        `"Chai for Your Resume" ☕ – CVFY wakes up your dead resume faster than adrak wali chai!`,
+        `"CVFY: Career ka Jugaad – resume aur cover letter ka tension gaya, ab bas success ki taraf badho!" 🚀`,
+        `"Recruiters Be Like…" 🤯 – "Yeh banda kuch toh special hai, ya phir ChatGPT ka distant cousin?"`,
+        '"Missing Skills? Jaise Paas Ghar Ki Chhoti Chhat!" 🏠 – "CVFY finds your missing skills like a desi mom finds missing socks!"'
     ]
 
     const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)]
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(".loading-screen", {
         opacity: 0,
         duration: 0.5,
-        delay: 5.5,
+        delay: 6.5,
         ease: "power1.inOut",
         onComplete: function () {
             document.querySelector(".loading-screen").style.display = "none";
