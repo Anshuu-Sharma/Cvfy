@@ -544,7 +544,7 @@ footer {
 
 .chat-bot-main-container {
   z-index: 9999999999;
-  /* display: none; */
+  display: none;
   border: 2px solid rgb(54, 54, 54); 
   position: fixed;
   bottom: 100px;

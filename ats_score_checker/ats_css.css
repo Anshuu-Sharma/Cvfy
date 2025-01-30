@@ -30,7 +30,7 @@ body{
   .ats-score-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     background-color: rgb(255, 255, 255);
