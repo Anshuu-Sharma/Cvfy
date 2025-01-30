@@ -526,7 +526,7 @@ footer {
 #chat-bot-container-toggle-up {
   z-index: 999999;
   position: fixed;
-  width: 70px;
+  width: 65px;
   bottom: 2vh;
   padding: 20px;
   background-color: #ffffff;
@@ -543,17 +543,19 @@ footer {
 }
 
 .chat-bot-main-container {
-  z-index: 999999;
-  display: none;
+  z-index: 9999999999;
+  /* display: none; */
   border: 2px solid rgb(54, 54, 54); 
   position: fixed;
   bottom: 100px;
   right: 30px;
-  width: 380px;  
-  height: 700px;
-  border-radius: 20px;
-  background-color: rgb(0, 0, 0);
-  overflow: hidden;
+  width: 45%;  
+  max-width: 450px; 
+  height: 80%; 
+  max-height: 650px;  
+  border-radius: 30px;  
+  background-color: rgb(0, 0, 0 );
+  /* overflow: hidden;  */
   flex-direction: column;
   opacity: 1;
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -612,15 +614,21 @@ footer {
 }
 
 /* Message input from user container  */
+.chat-bot-footer-container {
+  width: 100%;
+  position: absolute;
+  bottom:0px; 
+}
 .chat-bot-message-box {
-  width: 94%;
   display: flex;
-  margin: 0px 15px;
-  padding: 5px;
-  justify-content: space-between;
+  /* margin: 0px 15px; */
+  /* margin: 1px;  */
+  justify-content: flex-end;
   border: 1px solid #717070;
-  border-radius: 30px;
-  overflow: hidden;
+  /* border-radius: 30px; */
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px; 
+  overflow: hidden; 
 
   input {
       padding: 10px;
@@ -684,10 +692,7 @@ footer {
   color: red;
 }
 
-.chat-bot-footer-container {
-  height: 10px;
-  position: relative;
-}
+
 
 em-emoji-picker {
   position: absolute;
@@ -713,7 +718,7 @@ body.show-emoji-picker em-emoji-picker {
   padding: 0px 15px;
   position: relative;
   width: 100%;
-  height: 78%;
+  /* height: 78%; */
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: #717070 transparent;
