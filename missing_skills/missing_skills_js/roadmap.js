@@ -26,10 +26,18 @@ function generateRoadmap(skillsMap) {
         linkBox.innerHTML = skill.links.map(link => `<a href="${link}" target="_blank">${link}</a>`).join('<br>');
         skillElement.appendChild(linkBox);
 
-        // Toggle link box on click
+        // Toggle link box on click 
         skillElement.addEventListener('click', () => {
-            document.querySelectorAll('.link-box').forEach(box => box.style.display = 'none'); // Hide all other boxes
-            linkBox.style.display = linkBox.style.display === 'block' ? 'none' : 'block';
+            event.stopPropagation(); // Prevent bubbling issues
+            const isVisible = linkBox.style.display === "block";
+
+            // Hide all link boxes first
+            document.querySelectorAll('.link-box').forEach(box => box.style.display = 'none');
+
+            // Show only if it was previously hidden
+            if (!isVisible) {
+                linkBox.style.display = "block";
+            }
         });
     });
 }
