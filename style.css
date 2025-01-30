@@ -23,7 +23,9 @@
 /* loader css  */
 .loading-screen{
   /* full screen overlay */
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -33,6 +35,15 @@
   color: #fff;
   pointer-events: none;
   /* font-family: 'Jetbrains Mono', sans-serif; */
+}
+
+#funnyfacts{
+  width: 70vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
 }
 .counter{
   position: fixed;

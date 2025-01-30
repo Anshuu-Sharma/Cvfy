@@ -1,4 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const funFacts = [
+        `"Sharma Ji ka Beta Approved" ✅ – CVFY makes sure your resume is so perfect that even Sharma Ji’s beta would be like, "Bhai, yeh toh next level hai!"`,
+        `"No More Uncle-Approved Resume Advice" 😤 – You don’t need uncles telling you, "Beta, resume mein 'hardworking' likho!" CVFY actually knows what works.`,
+        `"Ek Dum Tandoori Resume" 🔥 – Your old resume was like bland khichdi, but after CVFY, it’s a full spicy tandoori platter—crispy, flavorful, and recruiter-approved!`,
+        `"ATS = Aapka Toh Selection?" 🤔 – Think of the ATS as a tough sanskari rishta aunty, rejecting everyone. CVFY helps your resume pass all the sanskari filters.`,
+        `"Chatty = Career Ka Bollywood Sidekick" 🎬 – Chatty is like Circuit to your Munna Bhai, Tuffy to your Hum Aapke Hain Koun, guiding you through your job hunt with full desi dedication.`,
+        `"Indian Moms Would Love CVFY" 👩‍👦 – Imagine telling your mom, "Maa, CVFY ne bola ki mera resume perfect hai!"—She will finally stop saying "Beta, kuch aur try kar le na?" 😆`,
+        `"Garam Chai & Perfect Resume = Best Combo" ☕ – Just like how a cutting chai wakes you up, CVFY wakes up your dead resume and makes it job-ready!`,
+        `"CVFY is Like Jugaad for Your Career" 🛠️ – Why struggle to write resumes manually when CVFY is here? Jugaad lagao, cover letter banwao, aur aish karo!`,
+        `"Recruiters Be Like ‘Ye Ladka Toh ChatGPT Use Karta Hai’" 😎 – With CVFY fixing your resume, recruiters will wonder if you secretly have an AI-powered Buddha brain for job applications!`,
+        `"Missing Skills? Like Masala Missing in Biryani!" 🍛 – CVFY finds your missing skills faster than Indians find a lack of spice in foreign food and immediately suggests the perfect recipe to fix it!`
+    ]
+
+    const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)]
+    const factElement = document.getElementById('funnyfacts');
+    if(factElement){
+        factElement.innerHTML = randomFact
+    }
+    else{
+        console.log("Element not found")
+    }
+
     const counter3 = document.querySelector(".counter-3");
     
     for (let i = 0; i < 2; i++) {
