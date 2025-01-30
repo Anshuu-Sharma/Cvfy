@@ -15,7 +15,8 @@ Missing skills:
 10. Skill_Name10: (<paste her the link1>, <paste here the  link 2>)
 
 ### **Important Instructions:**
-- Ensure the links are correct and doesnt give 404 errors and relevant to the missing skills.
+- Ensure the links are of working websites and doesnt give 404 errors and relevant to the missing skills, if you cant find 2 links for a resource you can add only one for it.
+- Return answer in a roadmap order,such that skill A need to be learnt first before skill B, but if there isnt any co-relation between them you may return in any order possible
 - Do NOT add extra text, explanations, or descriptions.
 - Do NOT repeat "https://" twice in the links.
 - Do NOT add skill variations in parentheses (e.g., avoid "https://Git or Mercurial").
