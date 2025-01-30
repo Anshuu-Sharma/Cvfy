@@ -28,52 +28,6 @@ function extractSkillsWithLinks(text) {
 
     return skillMap;
 }
-// const roadmapCreator = (roadmapData) => {
-//     const missingSkillsRoadmap = [
-//         { name: "Data Structures & Algorithms", links: [
-//             "https://www.coursera.org/learn/data-structures-optimizing-performance",
-//             "https://www.tutorialspoint.com/data_structures_algorithms/"
-//         ]},
-//         { name: "Operating Systems", links: [
-//             "https://www.coursera.org/specializations/operating-systems",
-//             "https://www.tutorialspoint.com/operating_system/"
-//         ]},
-//         { name: "Cloud Computing", links: [
-//             "https://www.coursera.org/specializations/google-cloud",
-//             "https://www.tutorialspoint.com/amazon_web_services/"
-//         ]}
-//     ];
-
-//     const roadmapContainer = document.getElementById('roadmapContainer');
-
-//     missingSkillsRoadmap.forEach((skill, index) => {
-//         // Create skill node
-//         const skillElement = document.createElement('div');
-//         skillElement.classList.add('skill');
-//         skillElement.innerText = skill.name;
-//         skillElement.setAttribute('data-index', index);
-//         roadmapContainer.appendChild(skillElement);
-
-//         // Add connectors (except last node)
-//         if (index < missingSkills.length - 1) {
-//             const connector = document.createElement('div');
-//             connector.classList.add('connector');
-//             roadmapContainer.appendChild(connector);
-//         }
-
-//         // Create hidden link box
-//         const linkBox = document.createElement('div');
-//         linkBox.classList.add('link-box');
-//         linkBox.innerHTML = skill.links.map(link => `<a href="${link}" target="_blank">${link}</a>`).join('');
-//         skillElement.appendChild(linkBox);
-
-//         // Toggle link box on click
-//         skillElement.addEventListener('click', () => {
-//             document.querySelectorAll('.link-box').forEach(box => box.style.display = 'none'); // Hide all other boxes
-//             linkBox.style.display = linkBox.style.display === 'block' ? 'none' : 'block';
-//         });
-//     });
-// }
 const UI = {
     elements: {
         form: document.getElementById('coverLetterForm'),
