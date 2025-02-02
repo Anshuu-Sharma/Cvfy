@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(".loading-screen", {
         opacity: 0,
         duration: 0.5,
-        delay: 0.5,
+        delay: 6.5, 
         ease: "power1.inOut",
         onComplete: function () {
             document.querySelector(".loading-screen").style.display = "none";
