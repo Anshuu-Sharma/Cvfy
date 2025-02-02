@@ -905,7 +905,6 @@ body.show-emoji-picker em-emoji-picker {
 /* Global Reset */
   /* Hero Section */
   .main-hero-section {
-    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -924,8 +923,9 @@ body.show-emoji-picker em-emoji-picker {
 }
 
 .main-hero-section-text {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
     font-size: 10vw;  /* Scales with screen size */
-    font-weight: 900;
+    font-weight: 950; 
     color: rgb(0 0, 0);
     padding: 10px;
     background: rgb(255, 255, 255);
