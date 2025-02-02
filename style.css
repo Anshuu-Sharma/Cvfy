@@ -14,7 +14,6 @@
   body{
     width: 100vw;
     height: 100vh;
-  
     background-color: #000000;
     background-attachment: fixed;
     color: white;
@@ -1344,6 +1343,17 @@ details summary:hover {
   /* height: 100%; */
   overflow: hidden;
 }
+.aboutCvfy2{
+  padding: 0px 20px;
+  background-color: #000000;
+  display: none;
+  flex-direction: column;
+  gap: 10rem;
+  align-items: center;
+  position: relative;
+  /* height: 100%; */
+  overflow: hidden;
+}
 .about{
   display: flex;
   gap:7rem;
@@ -1677,6 +1687,12 @@ details summary:hover {
   .cta {
       font-size: 26px;
       padding: 10px 50px; 
+  } 
+  .aboutCvfy{
+    display: none; 
+  }
+  .aboutCvfy2{
+    display: flex;
   }
 }
 
